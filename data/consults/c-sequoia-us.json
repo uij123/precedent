@@ -1,0 +1,21 @@
+{
+  "consult_id": "c-sequoia-us",
+  "title": "Sequoia · ultrasound — quick win, no gates",
+  "patient": { "id": "p-sequoia-us", "name": "Amara Diallo" },
+  "payer_id": "sequoia",
+  "cpt": "76700",
+  "scenario": {
+    "redflags": "absent",
+    "expect": { "redflags": "absent" }
+  },
+  "utterances": [
+    { "speaker": "doctor", "text": "Amara, you mentioned pain under the right ribs after fatty meals?" },
+    { "speaker": "patient", "text": "Yes, sharp and short, maybe twenty minutes each time. It wakes me up some nights." },
+    { "speaker": "doctor", "text": "Classic story for gallstones. Any fevers, yellowing of the eyes, or weight loss?" },
+    { "speaker": "patient", "text": "No, none. Just the pain episodes." },
+    { "speaker": "doctor", "text": "Which insurer are you with these days?" },
+    { "speaker": "patient", "text": "Sequoia Mutual, same as last year." },
+    { "speaker": "doctor", "text": "Then this is straightforward: let's get an ultrasound of the abdomen ordered to look at that gallbladder." },
+    { "speaker": "patient", "text": "Great. Sooner is better." }
+  ]
+}

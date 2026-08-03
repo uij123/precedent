@@ -1,0 +1,27 @@
+{
+  "consult_id": "c-atlas-5wk",
+  "title": "Atlas · knee 5wk — the strictest payer says no",
+  "patient": { "id": "p-atlas-5wk", "name": "Marcus Webb" },
+  "payer_id": "atlas",
+  "cpt": "73721",
+  "scenario": {
+    "therapy": { "weeks": 5 },
+    "notesAvailable": true,
+    "redflags": "absent",
+    "expect": { "therapy_weeks": 5, "redflags": "absent" }
+  },
+  "utterances": [
+    { "speaker": "doctor", "text": "Marcus, good to see you. How is the knee holding up since your last visit?" },
+    { "speaker": "patient", "text": "Still swelling after any real activity. Going down stairs is the worst part." },
+    { "speaker": "doctor", "text": "You have kept up the physical therapy we started?" },
+    { "speaker": "patient", "text": "Yes, five weeks of physical therapy now, twice a week with Dr. Imani." },
+    { "speaker": "doctor", "text": "Good. Can Dr. Imani's office send over the session notes for your chart?" },
+    { "speaker": "patient", "text": "Sure, they said they can share the notes whenever you need them." },
+    { "speaker": "doctor", "text": "Before we go further, any fevers, night sweats, or unexplained weight loss?" },
+    { "speaker": "patient", "text": "No, none of that. Just the knee." },
+    { "speaker": "doctor", "text": "For insurance, you are on Atlas through your employer, correct?" },
+    { "speaker": "patient", "text": "Right, Atlas Health Plan." },
+    { "speaker": "doctor", "text": "Given the mechanical symptoms, I think it's time we get an MRI of that knee to look at the meniscus." },
+    { "speaker": "patient", "text": "Whatever gets me an answer. Let's do it." }
+  ]
+}

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Precedent — prior auth that remembers</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <div class="brand">
+    <b>Precedent</b>
+    <span class="sub">Prior auth that remembers · synthetic data only</span>
+  </div>
+  <nav class="tabs">
+    <button id="tab-clinic" class="tab active">Consult</button>
+    <button id="tab-manager" class="tab">Practice manager <span id="alert-dot" class="dot hidden"></span></button>
+    <button id="tab-admin" class="tab">Admin</button>
+  </nav>
+</header>
+
+<!-- ===================== Consult (practitioner) ===================== -->
+<main id="view-clinic">
+  <section class="col col-visits">
+    <div class="panel grow" id="history-panel">
+      <h3>Visits</h3>
+      <div id="history" class="scroll"></div>
+    </div>
+  </section>
+
+  <section class="col col-left">
+    <div class="panel grow" id="transcript-panel">
+      <h3>Visit transcript <span class="live-dot hidden" id="rec-dot"><span class="dot8 d-alert"></span>Recording</span></h3>
+      <div class="row">
+        <button id="mic" class="btn">Start visit</button>
+        <button id="speaker" class="btn ghost hidden" title="Auto tags the speaker from what is said; tap to override">Speaker: Auto</button>
+      </div>
+      <div id="transcript" class="scroll"></div>
+    </div>
+    <div class="panel" id="captured-panel">
+      <h3>Captured details</h3>
+      <div id="captured"></div>
+    </div>
+  </section>
+
+  <section class="col col-center">
+    <div class="panel grow" id="chat-panel">
+      <h3>Copilot <span class="hint">Predicts from payer precedents. You approve every submission.</span></h3>
+      <div id="chat" class="scroll"></div>
+      <div class="chatbar">
+        <button id="prepare" class="btn primary" disabled>Prepare submission</button>
+        <input id="chat-input" placeholder="Ask the copilot">
+        <button id="chat-send" class="btn">Send</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===================== Practice manager ===================== -->
+<main id="view-manager" class="hidden">
+  <div id="alerts"></div>
+  <div class="panel" id="performance-panel">
+    <h3>First-pass approval rate <span class="hint">Rolling, all clinics</span></h3>
+    <svg id="rate-chart" viewBox="0 0 320 96"></svg>
+    <div id="chart-tip" class="chart-tip hidden"></div>
+    <div class="statrow">
+      <div class="stat"><span id="stat-rate">–</span><label>Current rate</label></div>
+      <div class="stat"><span id="stat-ttv">–</span><label>Median time to verdict</label></div>
+    </div>
+  </div>
+  <div class="panel" id="roi-panel">
+    <h3>Cost and savings <span class="hint" id="roi-src" title="Baselines: CAQH 2023/2024 Index; $25 denial-rework industry estimate; PA staff $24/hr. Token costs metered per call.">Sources</span></h3>
+    <div class="roi-head" id="roi-head">—</div>
+    <div class="statrow">
+      <div class="stat"><span id="roi-manual">$0</span><label>Manual equivalent</label></div>
+      <div class="stat"><span id="roi-actual">$0</span><label>Actual, tokens and human</label></div>
+      <div class="stat"><span id="roi-saved">$0</span><label>Saved</label></div>
+      <div class="stat"><span id="roi-minutes">0m</span><label>Staff time freed</label></div>
+    </div>
+    <div class="roi-split" id="roi-split"></div>
+  </div>
+  <div class="panel" id="claims-panel">
+    <h3>Claims <span class="hint">Every prior auth, its stage, and what it cost</span></h3>
+    <div id="claims"></div>
+  </div>
+  <div class="panel hidden" id="case-drawer">
+    <h3 id="drawer-title">Claim</h3>
+    <div id="drawer-body"></div>
+  </div>
+</main>
+
+<!-- ===================== Admin ===================== -->
+<main id="view-admin" class="hidden">
+  <section class="col col-half">
+    <div class="panel" id="demo-panel">
+      <h3>Demo driver <span class="hint">Replays a scripted consult through the live pipeline. Press F anywhere to trigger.</span></h3>
+      <div class="row">
+        <select id="script-pick"></select>
+      </div>
+      <div class="row">
+        <button id="replay" class="btn">Replay consult</button>
+        <select id="speed">
+          <option value="1700">Natural pace</option>
+          <option value="900">Brisk</option>
+          <option value="350">Fast</option>
+        </select>
+      </div>
+    </div>
+    <div class="panel" id="world-panel">
+      <h3>Background world <span class="hint">Other clinics generating payer outcomes</span></h3>
+      <div class="row">
+        <button id="bg-toggle" class="btn">Start</button>
+        <select id="bg-rate">
+          <option value="5000,10000">Every 5–10 s</option>
+          <option value="2000,4000">Every 2–4 s</option>
+          <option value="800,1500">Every 1–2 s</option>
+        </select>
+        <button id="bg-burst" class="btn ghost" title="Emit 10 events now">Burst ×10</button>
+        <button id="bg-seed" class="btn ghost" title="Emit 500 historical outcomes now — fills the rulebook fast">Seed ×500</button>
+      </div>
+      <div class="row">
+        <button id="fast-toggle" class="btn">Verdicts in 20 s</button>
+        <button id="reset" class="btn danger ghost" title="Wipe the memory graph">Reset memory</button>
+      </div>
+    </div>
+    <div class="panel" id="adapters-panel">
+      <h3>Service adapters <span class="hint"><span id="stat-events">0</span> outcomes learned</span></h3>
+      <div class="adapters" id="adapters"></div>
+    </div>
+    <div class="panel" id="harness-panel">
+      <h3>Test harness</h3>
+      <div class="row"><button id="harness-run" class="btn">Run tests</button></div>
+      <pre id="harness-out" class="scroll"></pre>
+    </div>
+  </section>
+
+  <section class="col col-half">
+    <div class="panel" id="ticker-panel">
+      <h3>Network feed <span class="hint">Other clinics, live</span></h3>
+      <div id="ticker" class="scroll ticker"></div>
+    </div>
+    <div class="panel" id="rulebook-panel">
+      <h3>Learned payer rulebook <span class="hint">Raw requirements with confidence. Click a row for its evidence.</span></h3>
+      <div id="rulebook"></div>
+    </div>
+    <div class="panel" id="graph-panel">
+      <h3>Memory graph <span class="hint">What the network has learned, as a graph. Click a requirement for its evidence.</span></h3>
+      <svg id="graph-viz"></svg>
+      <h3 class="qhead">Query the graph directly <span class="hint">Read-only Cypher against the live FalkorDB memory. Results are raw graph rows. The copilot chat accepts the same queries.</span></h3>
+      <div class="row graph-qrow">
+        <input id="graph-q" placeholder="MATCH (p:Payer)-[:REQUIRES]->(r) RETURN p.id, r.code LIMIT 10">
+        <button id="graph-run" class="btn">Run</button>
+      </div>
+      <div class="graph-canned">
+        <button class="srclink" data-q="MATCH (p:Payer)-[:REQUIRES]->(r:Requirement) RETURN p.id AS payer, r.code AS requirement, r.evidence_count AS evidence ORDER BY payer">Requirements by payer</button>
+        <button class="srclink" data-q="MATCH (o:Outcome)-[:BECAUSE]->(r:Requirement) RETURN r.code AS requirement, count(o) AS outcomes ORDER BY outcomes DESC">Evidence per requirement</button>
+        <button class="srclink" data-q="MATCH (n) RETURN labels(n)[0] AS label, count(n) AS total ORDER BY total DESC">Node counts</button>
+      </div>
+      <div id="graph-out"></div>
+    </div>
+    <div class="panel" id="inbox-panel">
+      <h3>Outbox <span class="hint" id="email-mode"></span></h3>
+      <div id="inbox" class="scroll"></div>
+    </div>
+  </section>
+</main>
+
+<!-- Sources side panel (click-to-audit provenance) -->
+<aside id="source-panel" class="hidden">
+  <div class="source-head">
+    <h3 id="source-title">Sources</h3>
+    <button id="source-close" class="btn ghost">Close</button>
+  </div>
+  <div id="source-body" class="scroll"></div>
+</aside>
+
+<script src="/app.js"></script>
+</body>
+</html>

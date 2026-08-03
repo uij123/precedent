@@ -1,0 +1,26 @@
+{
+  "consult_id": "c-pinnacle-3wk",
+  "title": "Pinnacle · lumbar 3wk — the easy modern payer",
+  "patient": { "id": "p-pinnacle-3wk", "name": "Nadia Osman" },
+  "payer_id": "pinnacle",
+  "cpt": "72148",
+  "scenario": {
+    "therapy": { "weeks": 3 },
+    "notesAvailable": true,
+    "redflags": "absent",
+    "expect": { "therapy_weeks": 3, "redflags": "absent" }
+  },
+  "utterances": [
+    { "speaker": "doctor", "text": "Nadia, how has the lower back been since we started treatment?" },
+    { "speaker": "patient", "text": "A little better in the mornings, but it still burns down my right leg by the afternoon." },
+    { "speaker": "doctor", "text": "You have stayed with the physical therapy program?" },
+    { "speaker": "patient", "text": "Yes, three weeks of physical therapy so far with the Riverside clinic." },
+    { "speaker": "doctor", "text": "Good. Ask them to send over their session notes, please. Now the safety questions: any numbness in the saddle area, trouble with bladder or bowel, fevers, or weight loss?" },
+    { "speaker": "patient", "text": "No, none of those." },
+    { "speaker": "doctor", "text": "And your coverage is Pinnacle, right?" },
+    { "speaker": "patient", "text": "Yes, Pinnacle Care through the exchange." },
+    { "speaker": "doctor", "text": "With the radicular pain persisting, I think we should get an MRI of the lumbar spine." },
+    { "speaker": "patient", "text": "Okay. Will they cover it this time?" },
+    { "speaker": "doctor", "text": "The system is checking Pinnacle's actual behavior as we speak. Sit tight." }
+  ]
+}

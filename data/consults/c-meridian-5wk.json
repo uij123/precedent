@@ -1,0 +1,104 @@
+{
+  "consult_id": "c-meridian-5wk",
+  "title": "Meridian · 5 weeks — denied for the order form, appeal wins",
+  "patient": {
+    "id": "p-meridian-5wk",
+    "name": "Priya Sharma"
+  },
+  "payer_id": "meridian",
+  "scenario": {
+    "therapy": {
+      "weeks": 5
+    },
+    "provider": "Dr. Nguyen",
+    "notesAvailable": true,
+    "redflags": "absent",
+    "expect": {
+      "therapy_weeks": 5,
+      "pt_notes_available": true,
+      "redflags": "absent"
+    }
+  },
+  "utterances": [
+    {
+      "speaker": "doctor",
+      "text": "Come on in, Priya. Last time we talked your lower back was still giving you trouble — how is it today?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Honestly, not much better. It aches most of the day, and it shoots down my left leg when I sit too long."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That radiating pain down the leg — that sounds like sciatica. On a scale of one to ten, where is it this week?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Around a six. Some mornings a seven."
+    },
+    {
+      "speaker": "doctor",
+      "text": "And before I forget for the paperwork — you're still on Meridian Care through work, right?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes, same plan as last year, Meridian Care."
+    },
+    {
+      "speaker": "doctor",
+      "text": "And you've kept up the physical therapy we set up?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes — it's been about five weeks now, twice a week, plus the ibuprofen when it flares."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Good. That's with Dr. Nguyen, correct?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes, with Dr. Nguyen. They said they can send over all my session notes if you need them."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Quick safety screen: any numbness in the groin or inner thighs, any bladder or bowel trouble, fevers, unexplained weight loss, or history of cancer?"
+    },
+    {
+      "speaker": "patient",
+      "text": "No, none of that. Just the back and the leg."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Good — no red flags on screening, I'll note that."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me take a look. Straight-leg raise on the left… tell me when it pulls."
+    },
+    {
+      "speaker": "patient",
+      "text": "Right about there — that reproduces the shooting pain."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Given how persistent this is, I think it's time we get an MRI of your lumbar spine to look at that disc."
+    },
+    {
+      "speaker": "patient",
+      "text": "I was hoping you'd say that. Will insurance cover it?"
+    },
+    {
+      "speaker": "doctor",
+      "text": "That's exactly what we're going to find out before you leave — the system is checking your plan as we speak."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Keep up the exercises in the meantime, and I'll have the front desk follow up about scheduling."
+    },
+    {
+      "speaker": "patient",
+      "text": "Thanks, doctor."
+    }
+  ]
+}

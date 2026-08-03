@@ -1,0 +1,167 @@
+{
+  "_comment": "Judgment harness golden file (spec §12.1). Each scenario: learned requirement state + consult facts in → expected prediction/missing/checklist/packet out. The runner executes every scenario TWICE and asserts run-to-run identity. cross_check_ground_truth: when true and prediction is LIKELY_APPROVED/LIKELY_DENIED, the assembled packet is fed to the ground-truth verdict simulator and must agree.",
+  "scenarios": [
+    {
+      "name": "bluepeak-empty-memory",
+      "payer_id": "bluepeak",
+      "requirements": [],
+      "facts": { "therapy_weeks": 4, "pt_notes_available": true, "redflags": "absent" },
+      "expect": { "prediction": "UNKNOWN", "confidence": 0, "missing_codes": [] }
+    },
+    {
+      "name": "bluepeak-4wk-after-first-denial",
+      "payer_id": "bluepeak",
+      "requirements": [
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 6 }, "evidence_count": 1, "confidence": 0.3333, "denied_at_max": 4, "approved_at_min": null },
+        { "code": "PT_NOTES_MISSING", "params": {}, "evidence_count": 1, "confidence": 0.3333, "denied_at_max": null, "approved_at_min": null }
+      ],
+      "facts": { "therapy_weeks": 4, "pt_notes_available": true, "redflags": "absent" },
+      "expect": {
+        "prediction": "LIKELY_DENIED", "confidence": 0.3333,
+        "missing_codes": ["THERAPY_DURATION_INSUFFICIENT"],
+        "checklist_included_keys": ["dx", "therapy", "redflag_screen", "pt_notes"],
+        "packet": { "therapy_weeks": 4, "pt_notes": true, "redflag_screen": true, "order_form": false, "dx": "M54.5", "redflags_present": false }
+      },
+      "cross_check_ground_truth": true
+    },
+    {
+      "name": "bluepeak-7wk-all-learned",
+      "payer_id": "bluepeak",
+      "requirements": [
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 6 }, "evidence_count": 3, "confidence": 1, "denied_at_max": 4, "approved_at_min": 6 },
+        { "code": "PT_NOTES_MISSING", "params": {}, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": null, "approved_at_min": null },
+        { "code": "REDFLAG_SCREEN_MISSING", "params": {}, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": null, "approved_at_min": null }
+      ],
+      "facts": { "therapy_weeks": 7, "pt_notes_available": true, "redflags": "absent" },
+      "expect": {
+        "prediction": "LIKELY_APPROVED", "confidence": 0.6667, "missing_codes": [],
+        "checklist_included_keys": ["dx", "therapy", "redflag_screen", "pt_notes"],
+        "packet": { "therapy_weeks": 7, "pt_notes": true, "redflag_screen": true, "order_form": false, "dx": "M54.5", "redflags_present": false }
+      },
+      "cross_check_ground_truth": true
+    },
+    {
+      "name": "bluepeak-redflags-present-expedited",
+      "payer_id": "bluepeak",
+      "requirements": [
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 6 }, "evidence_count": 3, "confidence": 1, "denied_at_max": 4, "approved_at_min": 6 }
+      ],
+      "facts": { "therapy_weeks": 1, "pt_notes_available": false, "redflags": "present" },
+      "expect": { "prediction": "LIKELY_EXPEDITED", "confidence": 1, "missing_codes": [] },
+      "cross_check_ground_truth": true
+    },
+    {
+      "name": "bluepeak-5wk-untested-band-no-params",
+      "payer_id": "bluepeak",
+      "requirements": [
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": {}, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": 4, "approved_at_min": 6 }
+      ],
+      "facts": { "therapy_weeks": 5, "pt_notes_available": true, "redflags": "absent" },
+      "expect": { "prediction": "UNKNOWN", "confidence": 0.6667, "missing_codes": ["THERAPY_DURATION_INSUFFICIENT"] }
+    },
+    {
+      "name": "meridian-3wk-one-week-short",
+      "payer_id": "meridian",
+      "requirements": [
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 4 }, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": 3, "approved_at_min": null },
+        { "code": "REDFLAG_SCREEN_MISSING", "params": {}, "evidence_count": 1, "confidence": 0.3333, "denied_at_max": null, "approved_at_min": null },
+        { "code": "ORDER_FORM_MISSING", "params": {}, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": null, "approved_at_min": null }
+      ],
+      "facts": { "therapy_weeks": 3, "pt_notes_available": false, "redflags": "absent" },
+      "expect": {
+        "prediction": "LIKELY_DENIED", "confidence": 0.6667,
+        "missing_codes": ["THERAPY_DURATION_INSUFFICIENT"],
+        "checklist_included_keys": ["dx", "therapy", "redflag_screen", "order_form"],
+        "packet": { "therapy_weeks": 3, "pt_notes": false, "redflag_screen": true, "order_form": true, "dx": "M54.5", "redflags_present": false }
+      },
+      "cross_check_ground_truth": true
+    },
+    {
+      "name": "meridian-4wk-form-learned-approve",
+      "payer_id": "meridian",
+      "requirements": [
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 4 }, "evidence_count": 3, "confidence": 1, "denied_at_max": 3, "approved_at_min": 4 },
+        { "code": "REDFLAG_SCREEN_MISSING", "params": {}, "evidence_count": 3, "confidence": 1, "denied_at_max": null, "approved_at_min": null },
+        { "code": "ORDER_FORM_MISSING", "params": {}, "evidence_count": 3, "confidence": 1, "denied_at_max": null, "approved_at_min": null }
+      ],
+      "facts": { "therapy_weeks": 4, "pt_notes_available": false, "redflags": "absent" },
+      "expect": {
+        "prediction": "LIKELY_APPROVED", "confidence": 1, "missing_codes": [],
+        "checklist_included_keys": ["dx", "therapy", "redflag_screen", "order_form"],
+        "packet": { "therapy_weeks": 4, "pt_notes": false, "redflag_screen": true, "order_form": true, "dx": "M54.5", "redflags_present": false }
+      },
+      "cross_check_ground_truth": true
+    },
+    {
+      "name": "calwest-3wk-easy-approve",
+      "payer_id": "calwest",
+      "requirements": [
+        { "code": "DIAGNOSIS_CODE_INVALID", "params": {}, "evidence_count": 1, "confidence": 0.3333, "denied_at_max": null, "approved_at_min": null },
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 1 }, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": 0, "approved_at_min": 2 }
+      ],
+      "facts": { "therapy_weeks": 3, "pt_notes_available": false, "redflags": "absent" },
+      "expect": {
+        "prediction": "LIKELY_APPROVED", "confidence": 0.3333, "missing_codes": [],
+        "packet": { "therapy_weeks": 3, "pt_notes": false, "redflag_screen": true, "order_form": false, "dx": "M54.5", "redflags_present": false }
+      },
+      "cross_check_ground_truth": true
+    },
+    {
+      "name": "calwest-zero-weeks-denied",
+      "payer_id": "calwest",
+      "requirements": [
+        { "code": "DIAGNOSIS_CODE_INVALID", "params": {}, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": null, "approved_at_min": null },
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 1 }, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": 0, "approved_at_min": 2 }
+      ],
+      "facts": { "therapy_weeks": 0, "pt_notes_available": false, "redflags": "absent" },
+      "expect": {
+        "prediction": "LIKELY_DENIED", "confidence": 0.6667,
+        "missing_codes": ["THERAPY_DURATION_INSUFFICIENT"],
+        "packet": { "therapy_weeks": 0, "pt_notes": false, "redflag_screen": true, "order_form": false, "dx": "M54.5", "redflags_present": false }
+      },
+      "cross_check_ground_truth": true
+    },
+    {
+      "name": "bluepeak-8wk-but-never-screened",
+      "payer_id": "bluepeak",
+      "requirements": [
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 6 }, "evidence_count": 3, "confidence": 1, "denied_at_max": 4, "approved_at_min": 6 },
+        { "code": "PT_NOTES_MISSING", "params": {}, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": null, "approved_at_min": null },
+        { "code": "REDFLAG_SCREEN_MISSING", "params": {}, "evidence_count": 1, "confidence": 0.3333, "denied_at_max": null, "approved_at_min": null }
+      ],
+      "facts": { "therapy_weeks": 8, "pt_notes_available": true },
+      "expect": {
+        "prediction": "LIKELY_DENIED", "confidence": 0.3333,
+        "missing_codes": ["REDFLAG_SCREEN_MISSING"],
+        "packet": { "therapy_weeks": 8, "pt_notes": true, "redflag_screen": false, "order_form": false, "dx": "M54.5", "redflags_present": false }
+      },
+      "cross_check_ground_truth": true
+    },
+    {
+      "name": "bluepeak-7wk-notes-unavailable",
+      "payer_id": "bluepeak",
+      "requirements": [
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 6 }, "evidence_count": 3, "confidence": 1, "denied_at_max": 4, "approved_at_min": 6 },
+        { "code": "PT_NOTES_MISSING", "params": {}, "evidence_count": 3, "confidence": 1, "denied_at_max": null, "approved_at_min": null },
+        { "code": "REDFLAG_SCREEN_MISSING", "params": {}, "evidence_count": 3, "confidence": 1, "denied_at_max": null, "approved_at_min": null }
+      ],
+      "facts": { "therapy_weeks": 7, "pt_notes_available": false, "redflags": "absent" },
+      "expect": {
+        "prediction": "LIKELY_DENIED", "confidence": 1,
+        "missing_codes": ["PT_NOTES_MISSING"],
+        "packet": { "therapy_weeks": 7, "pt_notes": false, "redflag_screen": true, "order_form": false, "dx": "M54.5", "redflags_present": false }
+      },
+      "cross_check_ground_truth": true
+    },
+    {
+      "name": "bluepeak-therapy-undocumented",
+      "payer_id": "bluepeak",
+      "requirements": [
+        { "code": "THERAPY_DURATION_INSUFFICIENT", "params": { "required_weeks": 6 }, "evidence_count": 2, "confidence": 0.6667, "denied_at_max": 4, "approved_at_min": null },
+        { "code": "PT_NOTES_MISSING", "params": {}, "evidence_count": 1, "confidence": 0.3333, "denied_at_max": null, "approved_at_min": null }
+      ],
+      "facts": { "pt_notes_available": true, "redflags": "absent" },
+      "expect": { "prediction": "UNKNOWN", "confidence": 0.6667, "missing_codes": ["THERAPY_DURATION_INSUFFICIENT"] }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "consult_id": "c-sequoia-ct",
+  "title": "Sequoia · CT abdomen — the paperwork-only payer",
+  "patient": { "id": "p-sequoia-ct", "name": "Omar Sayed" },
+  "payer_id": "sequoia",
+  "cpt": "74177",
+  "scenario": {
+    "redflags": "absent",
+    "expect": { "redflags": "absent" }
+  },
+  "utterances": [
+    { "speaker": "doctor", "text": "Omar, tell me about this abdominal pain you called about." },
+    { "speaker": "patient", "text": "It sits low on my right side and comes in waves, mostly after meals. Two weeks now." },
+    { "speaker": "doctor", "text": "Any fevers, unexplained weight loss, or blood where there should not be any?" },
+    { "speaker": "patient", "text": "No, none of that. Appetite is normal too." },
+    { "speaker": "doctor", "text": "Good. Your labs from Tuesday are unremarkable, which is reassuring but does not explain the pain." },
+    { "speaker": "patient", "text": "So what is next? I am on Sequoia Mutual if that matters for approvals." },
+    { "speaker": "doctor", "text": "It matters for the paperwork, not the medicine. Given two weeks of localized pain with clean labs, we should get a CT scan of the abdomen and pelvis." },
+    { "speaker": "patient", "text": "Okay. I would rather know than keep guessing." }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "consult_id": "c-pinnacle-brain-redflag",
+  "title": "Pinnacle · brain — red flags, expedited pathway",
+  "patient": { "id": "p-pinnacle-brain", "name": "Tomas Vidal" },
+  "payer_id": "pinnacle",
+  "cpt": "70551",
+  "scenario": {
+    "redflags": "present",
+    "expect": { "redflags": "present" }
+  },
+  "utterances": [
+    { "speaker": "doctor", "text": "Tomas, walk me through exactly what happened this morning." },
+    { "speaker": "patient", "text": "A headache hit me out of nowhere, worst of my life, and my left arm went weak for a few minutes." },
+    { "speaker": "doctor", "text": "A thunderclap headache with new arm weakness — that is a red flag, and we treat it as urgent." },
+    { "speaker": "patient", "text": "That is what scared me. I am on Pinnacle, do we need to wait for their approval?" },
+    { "speaker": "doctor", "text": "No waiting. With documented red flags this goes on the expedited pathway — I'm ordering an MRI of the brain now." },
+    { "speaker": "patient", "text": "Thank you. Please make it fast." }
+  ]
+}

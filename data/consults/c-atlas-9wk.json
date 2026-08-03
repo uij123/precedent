@@ -1,0 +1,25 @@
+{
+  "consult_id": "c-atlas-9wk",
+  "title": "Atlas · knee 9wk — approval once the bar is met",
+  "patient": { "id": "p-atlas-9wk", "name": "Sofia Reyes" },
+  "payer_id": "atlas",
+  "cpt": "73721",
+  "scenario": {
+    "therapy": { "weeks": 9 },
+    "notesAvailable": true,
+    "redflags": "absent",
+    "expect": { "therapy_weeks": 9, "redflags": "absent" }
+  },
+  "utterances": [
+    { "speaker": "doctor", "text": "Sofia, come in. Your knee has had a long conservative run now — where are we?" },
+    { "speaker": "patient", "text": "Nine weeks of physical therapy and it still catches and locks when I pivot." },
+    { "speaker": "doctor", "text": "Locking after that much therapy is a mechanical sign. Who have you been working with?" },
+    { "speaker": "patient", "text": "With Dr. Imani, same as before. They said they can forward the session notes to you today." },
+    { "speaker": "doctor", "text": "Please have them do that. Any fevers, weight loss, or history of cancer I should know about?" },
+    { "speaker": "patient", "text": "No, neither. I feel fine otherwise." },
+    { "speaker": "doctor", "text": "And you are still with Atlas for insurance?" },
+    { "speaker": "patient", "text": "Yes, Atlas Health Plan through work." },
+    { "speaker": "doctor", "text": "Then with nine documented weeks and mechanical locking, let's get an MRI of the knee ordered." },
+    { "speaker": "patient", "text": "Finally. Thank you." }
+  ]
+}

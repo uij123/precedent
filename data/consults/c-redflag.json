@@ -1,0 +1,94 @@
+{
+  "consult_id": "c-redflag",
+  "title": "BluePeak · cauda equina red flags — expedited pathway",
+  "patient": {
+    "id": "p-redflag",
+    "name": "Elena Petrova"
+  },
+  "payer_id": "bluepeak",
+  "scenario": {
+    "therapy": {
+      "weeks": 1
+    },
+    "provider": null,
+    "notesAvailable": false,
+    "redflags": "present",
+    "expect": {
+      "redflags": "present"
+    }
+  },
+  "utterances": [
+    {
+      "speaker": "doctor",
+      "text": "Come on in, Elena. Last time we talked your lower back was still giving you trouble — how is it today?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Honestly, not much better. It aches most of the day, and it shoots down my left leg when I sit too long."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That radiating pain down the leg — that sounds like sciatica. On a scale of one to ten, where is it this week?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Around a six. Some mornings a seven."
+    },
+    {
+      "speaker": "doctor",
+      "text": "And before I forget for the paperwork — you're still on BluePeak Health through work, right?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes, same plan as last year, BluePeak Health."
+    },
+    {
+      "speaker": "doctor",
+      "text": "And you've kept up the physical therapy we set up?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Yes — it's been about one week now, twice a week, plus the ibuprofen when it flares."
+    },
+    {
+      "speaker": "doctor",
+      "text": "I need to ask a few safety questions. Any numbness in the saddle area — groin, inner thighs? Any trouble controlling your bladder or bowels?"
+    },
+    {
+      "speaker": "patient",
+      "text": "Actually… yes. Since yesterday the inside of my thighs feels numb, and this morning I couldn't fully empty my bladder."
+    },
+    {
+      "speaker": "doctor",
+      "text": "That combination is a red flag for cauda equina syndrome and we treat it as urgent. Any fevers, unexplained weight loss, or history of cancer?"
+    },
+    {
+      "speaker": "patient",
+      "text": "No fevers, no weight loss, no cancer history."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Let me take a look. Straight-leg raise on the left… tell me when it pulls."
+    },
+    {
+      "speaker": "patient",
+      "text": "Right about there — that reproduces the shooting pain."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Given those symptoms I don't want to wait any longer — I'm ordering an MRI of your lumbar spine today, on an urgent basis."
+    },
+    {
+      "speaker": "patient",
+      "text": "Okay. Whatever gets answers fastest."
+    },
+    {
+      "speaker": "doctor",
+      "text": "Keep up the exercises in the meantime, and I'll have the front desk follow up about scheduling."
+    },
+    {
+      "speaker": "patient",
+      "text": "Thanks, doctor."
+    }
+  ]
+}
