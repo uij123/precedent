@@ -90,6 +90,31 @@ export async function createFalkorGraph({ url, graphName }) {
         { cid: consultId });
       return rows.map((r) => ({ consult_id: consultId, seq: r.seq, speaker: r.speaker, text: r.text, ts: r.ts }));
     },
+    /** Chat persistence — the copilot conversation is part of the visit. */
+    async addChatMessage(consultId, caseId, m) {
+      await q(
+        `MATCH (co:Consult {id: $cid})
+         CREATE (co)-[:DISCUSSED]->(:ChatMessage {consult_id: $cid, case_id: $case, id: $mid,
+           role: $role, kind: $kind, agent: $agent, text: $tx, data_json: $dj, ts: $ts})`,
+        {
+          cid: consultId, case: caseId, mid: m.id, role: m.role, kind: m.kind ?? null,
+          agent: m.agent ?? null, tx: m.text || '', dj: m.data ? JSON.stringify(m.data) : null, ts: m.ts,
+        });
+    },
+    async getChatMessages(consultId) {
+      const rows = await q(
+        `MATCH (:Consult {id: $cid})-[:DISCUSSED]->(m:ChatMessage)
+         RETURN m.case_id AS case_id, m.id AS id, m.role AS role, m.kind AS kind,
+                m.agent AS agent, m.text AS text, m.data_json AS data_json, m.ts AS ts
+         ORDER BY m.ts`,
+        { cid: consultId });
+      return rows.map((r) => ({
+        case_id: r.case_id, id: r.id, role: r.role, kind: r.kind ?? undefined,
+        agent: r.agent ?? undefined, text: r.text, ts: r.ts,
+        data: r.data_json ? JSON.parse(r.data_json) : undefined,
+      }));
+    },
+
     async listConsults(limit = 30) {
       const rows = await q(
         `MATCH (co:Consult)-[:ABOUT]->(pt:Patient)

@@ -42,6 +42,13 @@ export function createLocalGraph() {
       return [...(state.consults.get(consultId)?.utterances || [])]
         .sort((a, b) => (a.ts < b.ts ? -1 : a.ts > b.ts ? 1 : a.seq - b.seq));
     },
+    async addChatMessage(consultId, caseId, m) {
+      const c = state.consults.get(consultId);
+      if (c) (c.chat ||= []).push({ case_id: caseId, id: m.id, role: m.role, kind: m.kind, agent: m.agent, text: m.text, data: m.data, ts: m.ts });
+    },
+    async getChatMessages(consultId) {
+      return [...(state.consults.get(consultId)?.chat || [])].sort((a, b) => (a.ts < b.ts ? -1 : 1));
+    },
     async listConsults(limit = 30) {
       return [...state.consults.values()]
         .sort((a, b) => (a.started_at < b.started_at ? 1 : -1)).slice(0, limit)

@@ -197,19 +197,25 @@ async function selectArchived(consultId) {
   state.viewingArchived = true;
   $('transcript').innerHTML = '';
   state.facts = {};
+  let chatLog = [];
   try {
     const d = await (await fetch(`/api/consult/${consultId}/history`)).json();
     for (const u of d.utterances || []) addUtterance(u);
     state.facts = d.facts || {};
+    chatLog = d.chat || [];
   } catch { /* nothing recorded */ }
   renderCaptured(); renderHistory(); syncActive();
-  $('chat').innerHTML = '<div class="msg system">Archived visit, restored from the memory graph. Chat is not retained for archived visits.</div>';
+  $('chat').innerHTML = '<div class="msg system">Archived visit, restored from the memory graph. Review only.</div>'
+    + chatHtml(chatLog, { archived: true });
+  $('chat').scrollTop = 0;
+  $('chat-input').disabled = true; $('chat-send').disabled = true;
 }
 
 function startClean() {
   state.activeCaseId = null;
   state.activeConsultId = null;
   state.viewingArchived = false;
+  $('chat-input').disabled = false; $('chat-send').disabled = false;
   clearConsultPanels();
   renderChat(); renderHistory(); syncActive();
 }
@@ -218,6 +224,7 @@ async function selectVisit(caseId, consultId) {
   state.activeCaseId = caseId;
   state.activeConsultId = consultId;
   state.viewingArchived = false;
+  $('chat-input').disabled = false; $('chat-send').disabled = false;
   $('transcript').innerHTML = '';
   state.facts = {};
   try {
@@ -229,27 +236,33 @@ async function selectVisit(caseId, consultId) {
 }
 
 function renderChat() {
+  if (state.viewingArchived) return; // archived chat is rendered by selectArchived
   const log = state.chatlogs[state.activeCaseId || 'global'] || [];
   if (!log.length) {
     $('chat').innerHTML = '<div class="msg system">No visit in progress. You can still ask the memory graph: "what does BluePeak require?" — or paste a read-only Cypher query.</div>';
     return;
   }
+  $('chat').innerHTML = chatHtml(log);
+  $('chat').scrollTop = 1e9;
+}
+
+function chatHtml(log, { archived = false } = {}) {
   const payer = activePayerId();
-  $('chat').innerHTML = log.map((m) => {
+  return log.map((m) => {
     if (m.role === 'approval') {
       const items = (m.data?.checklist || []).map((i) => `
         <div class="chk">
           <span class="dot8 ${i.satisfied ? 'd-ok' : 'd-alert'}"></span>
           <span>${esc(i.label)} <span class="why ${i.reason === 'learned-requirement' ? 'learned' : ''}">${i.reason === 'learned-requirement' ? '· learned from denials' : '· clinical standard'}</span>${i.requirement_code && payer ? ` <button class="srclink" onclick="openSource('${payer}','${i.requirement_code}')">Sources</button>` : ''}</span>
         </div>`).join('');
-      const pending = !m.resolved;
+      const pending = !m.resolved && !archived;
       return `<div class="msg agent checklist-card" data-mid="${m.id}">
         <span class="agentname">Human approval gate. Nothing executes before approval.</span>
         ${esc(m.text)}<div class="items">${items}</div>
         <div class="approve-row">${pending
           ? `<button class="btn primary" onclick="approve('${m.data.approval_id}','approved','${m.id}')">Approve and execute</button>
              <button class="btn" onclick="approve('${m.data.approval_id}','rejected','${m.id}')">Reject</button>`
-          : `<span class="hint">${esc(m.resolved)}</span>`}
+          : `<span class="hint">${esc(m.resolved || (archived ? 'Decided in the live visit.' : ''))}</span>`}
         </div></div>`;
     }
     const cls = m.role === 'user' ? 'user' : m.role === 'system' ? 'system' : `agent ${m.kind || ''}`;
@@ -261,7 +274,6 @@ function renderChat() {
       : '';
     return `<div class="msg ${cls}">${name}${esc(m.text)}${srcRow}</div>`;
   }).join('');
-  $('chat').scrollTop = 1e9;
 }
 
 // ---------- sources panel (click-to-audit provenance) ----------

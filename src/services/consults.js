@@ -17,6 +17,9 @@ export function createConsults({ bus, graph, llm, cases, guild, chains, config, 
     if (!chatlogs.has(caseId)) chatlogs.set(caseId, []);
     chatlogs.get(caseId).push(rec);
     emit('chat', { case_id: caseId, message: rec });
+    // persist with the visit so archived reviews keep their conversation
+    const consultId = cases.get(caseId)?.consult_id;
+    if (consultId) graph.addChatMessage(consultId, caseId, rec).catch((e) => console.error('[chat-persist]', e.message));
     return rec;
   }
 

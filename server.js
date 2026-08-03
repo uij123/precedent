@@ -232,7 +232,11 @@ const server = createServer(async (req, res) => {
       const factMap = await graph.getFacts(consultId);
       const facts = {};
       for (const [k, v] of Object.entries(factMap || {})) facts[k] = v?.value ?? v;
-      return sendJson(res, 200, { utterances, facts });
+      // chat from the same (latest) run as the transcript
+      const chatAll = await graph.getChatMessages(consultId);
+      const latestCase = chatAll.length ? chatAll[chatAll.length - 1].case_id : null;
+      const chat = chatAll.filter((m) => m.case_id === latestCase);
+      return sendJson(res, 200, { utterances, facts, chat });
     }
 
     // ---- claim-source audit (spec: every learned claim is traceable) ----
