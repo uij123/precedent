@@ -1,0 +1,29 @@
+ Prior Authorization List for Blue Shield
+                  Effective August 1, 2026
+          (This List is updated monthly)
+Page 1 of 2
+
+Policy Name/Program Procedure Code (To search, Press Ctrl + F)
+To access our most up-to-date prior authorization list, please use AuthAccel - Blue
+Shield's online authorization system.
+Administrative-Medical - Air Ambulance A0430
+Administrative-Medical - Continuous Home
+Hospice
+T2043
+RadMD
+• Advanced Imaging
+• Spine Surgery
+CarePro
+• Radiation Oncology
+
+ Advanced Imaging
+Spine Surgery
+Skeletal Remodeling21600, 21899
+Treatment of Varicose Veins/Venous
+Insufficiency
+36465, 36466, 36468
+Vagus Nerve StimulationC1767
+Codes Added
+NoneNone
+Codes Removed
+36471

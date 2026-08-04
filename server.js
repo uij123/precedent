@@ -10,6 +10,8 @@ import { spawn } from 'node:child_process';
 import { config } from './src/config.js';
 import { readJson, sendJson } from './src/util.js';
 import { REQ_LABELS, CLINICAL_STANDARDS } from './src/core/decide.js';
+import { loadRulesets } from './src/pa-graph/cli.js';
+import { resolve as paResolve } from './src/pa-graph/resolve.js';
 import { adapterStatus } from './src/adapters/status.js';
 import { createBus } from './src/adapters/bus/index.js';
 import { createGraph } from './src/adapters/graph/index.js';
@@ -73,7 +75,18 @@ async function runReadOnlyCypher(cypher) {
   return graph.rawQuery(q);
 }
 
-const chat = createChat({ llm, consults, graph, graphQuery: runReadOnlyCypher });
+// Real California PA graph: canonical rulesets + IMR aggregates hydrate at
+// boot; the resolver itself is a pure function over them.
+const paRulesets = loadRulesets();
+let paImr = null;
+try { paImr = JSON.parse(readFileSync(join(root, 'data', 'pa', 'imr-aggregates.json'), 'utf8')); } catch { /* not ingested yet */ }
+console.log(`[pa-graph] ${paRulesets.length} ruleset(s) hydrated${paImr ? ` · IMR aggregates (${paImr.rows} determinations)` : ''}`);
+const pa = {
+  resolve: (q) => paResolve(paRulesets, q),
+  imrCategory: (name) => paImr?.categories.find((c) => c.category === name) || null,
+};
+
+const chat = createChat({ llm, consults, graph, graphQuery: runReadOnlyCypher, pa });
 const metrics = createMetrics({ bus, cases, meter });
 
 startIngest({
@@ -125,6 +138,7 @@ const server = createServer(async (req, res) => {
       const caseSnap = cases.snapshot(config);
       const chatlogs = {};
       for (const c of caseSnap.cases) chatlogs[c.case_id] = consults.chatlog(c.case_id);
+      chatlogs.global = consults.chatlog('global');
       return sendJson(res, 200, {
         adapters: adapterStatus(),
         scripts: scripts().map((s) => ({ id: s.consult_id, title: s.title, patient: s.patient.name, payer_id: s.payer_id })),
@@ -206,6 +220,18 @@ const server = createServer(async (req, res) => {
       await graph.resetAll();
       broadcast('reset', {});
       return sendJson(res, 200, { ok: true, note: 'graph wiped — memory starts from zero (restart server for a full state reset)' });
+    }
+
+    // ---- real California PA resolver ----
+    if (path === '/api/pa/resolve' && req.method === 'GET') {
+      const p = url.searchParams;
+      const resolution = pa.resolve({
+        payer: p.get('payer'), lob: p.get('lob') || 'commercial',
+        code: p.get('code'), asOf: p.get('date') || new Date().toISOString().slice(0, 10),
+      });
+      const imr = resolution.requirement_type === 'prior_auth_delegated'
+        ? pa.imrCategory('Diag Imag & Screen') : null;
+      return sendJson(res, 200, { resolution, imr_context: imr });
     }
 
     // ---- memory graph: read-only query console (admin + chat) ----

@@ -1,0 +1,1695 @@
+{
+  "source_id": "blueshield-commercial-pa-list",
+  "payer_id": "blueshield_ca",
+  "payer_name": "Blue Shield of California",
+  "lob": "commercial",
+  "document": {
+    "title": "Prior Authorization List for Blue Shield",
+    "url": "https://www.blueshieldca.com/content/dam/bsca/en/provider/docs/BSC-Prior-Auth-List.pdf"
+  },
+  "effective_from": "2026-08-01",
+  "sha256": "40b55351cefcc5613c0a669316d829e1dc363fbe2ecb1d98746f4e8288ee9e80",
+  "fetched_at": "2026-08-04T00:43:27.121Z",
+  "rules": [
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Air Ambulance",
+      "codes": [
+        "A0430"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Clinical Trials",
+      "codes": [
+        "S9988",
+        "S9990",
+        "S9991",
+        "S9992",
+        "S9994",
+        "S9996"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Continuous Home Hospice",
+      "codes": [
+        "T2043"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Enteral/Parenteral",
+      "codes": [
+        "B4034",
+        "B4035",
+        "B4036",
+        "B4081",
+        "B4082",
+        "B4083",
+        "B4087",
+        "B4088",
+        "B4100",
+        "B4102",
+        "B4103",
+        "B4104",
+        "B4149",
+        "B4150",
+        "B4152",
+        "B4153",
+        "B4154",
+        "B4155",
+        "B4157",
+        "B4158",
+        "B4159",
+        "B4160",
+        "B4161",
+        "B4162",
+        "B4164",
+        "B4168",
+        "B4172",
+        "B4176",
+        "B4178",
+        "B4180",
+        "B4185",
+        "B4189",
+        "B4193",
+        "B4197",
+        "B4199",
+        "B4216",
+        "B4220",
+        "B4222",
+        "B4224",
+        "B5000",
+        "B5100",
+        "B5200",
+        "B9002",
+        "B9004",
+        "B9006"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Home Hospice",
+      "codes": [
+        "Q5010",
+        "S9126",
+        "T2042"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Home Infusion",
+      "codes": [
+        "S9379"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Hospice Care (Assisted Living Facility)",
+      "codes": [
+        "Q5002"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Hospice Care (Hospice Inpatient Facility)",
+      "codes": [
+        "Q5006"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Hospice Care (Inpatient Hospital)",
+      "codes": [
+        "Q5005"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Hospice Care (Inpatient Psych Facility)",
+      "codes": [
+        "Q5008"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Hospice Care (Long-Term Care Facility)",
+      "codes": [
+        "Q5007"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Hospice Care (Skilled Nursing Facility)",
+      "codes": [
+        "Q5004"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Inpatient Injectable/Infusion",
+      "codes": [
+        "96413",
+        "96415",
+        "96416",
+        "96417",
+        "96440",
+        "96446",
+        "96450",
+        "96542",
+        "96549"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Nursing/Shift Care",
+      "codes": [
+        "S9123",
+        "S9124"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical - Solid Organ Transplant",
+      "codes": [
+        "S9975"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Medical--Home Hospice",
+      "codes": [
+        "Q5001"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Administrative-Pharmacy",
+      "codes": [
+        "S9560"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Adjustable Cranial Orthoses for Positional Plagiocephaly and Craniosynostoses",
+      "codes": [
+        "97799"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Allogeneic Hematopoietic Cell Transplantation for Myelodysplastic Syndromes and Myeloproliferative Neoplasms",
+      "codes": [
+        "38204",
+        "38205",
+        "38207",
+        "38230",
+        "38240",
+        "86813",
+        "86817"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Allogeneic Pancreas Transplant",
+      "codes": [
+        "48554"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Ambulatory Event Monitors and Mobile Cardiac Outpatient Telemetry",
+      "codes": [
+        "0937T",
+        "0938T",
+        "0939T",
+        "0940T",
+        "33285",
+        "93241",
+        "93242",
+        "93243",
+        "93244",
+        "93245",
+        "93246",
+        "93247",
+        "93248",
+        "93268",
+        "93270",
+        "93271",
+        "93272"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Balloon Ostial Dilation for Treatment of Chronic and Recurrent Acute Rhinosinusitis",
+      "codes": [
+        "31295",
+        "31296",
+        "31297",
+        "31298"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Bariatric Surgery",
+      "codes": [
+        "0813T",
+        "43632",
+        "43644",
+        "43645",
+        "43659",
+        "43770",
+        "43771",
+        "43772",
+        "43773",
+        "43774",
+        "43775",
+        "43842",
+        "43843",
+        "43845",
+        "43846",
+        "43847",
+        "43848",
+        "43860",
+        "43865",
+        "43886",
+        "43887",
+        "43888",
+        "43999"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Behavioral Health",
+      "codes": [
+        "00104",
+        "0362T",
+        "0373T",
+        "0889T",
+        "0890T",
+        "0891T",
+        "0892T",
+        "90867",
+        "90868",
+        "90869",
+        "90870",
+        "90889",
+        "96116",
+        "96121",
+        "96132",
+        "96133",
+        "96136",
+        "96137",
+        "96138",
+        "96139",
+        "96146",
+        "97151",
+        "97152",
+        "97153",
+        "97154",
+        "97155",
+        "97156",
+        "97157",
+        "97158",
+        "G0137",
+        "G0410",
+        "G0411",
+        "G2000",
+        "G8539",
+        "H0008",
+        "H0009",
+        "H0010",
+        "H0011",
+        "H0012",
+        "H0013",
+        "H0014",
+        "H0015",
+        "H0017",
+        "H0018",
+        "H0019",
+        "H0031",
+        "H0032",
+        "H0035",
+        "H2012",
+        "H2014",
+        "H2019",
+        "H2020",
+        "H2034",
+        "S0201",
+        "S5108",
+        "S5110",
+        "S5111",
+        "S9475",
+        "S9480"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Bioengineered Skin and Soft Tissue Substitutes",
+      "codes": [
+        "Q4101",
+        "Q4102",
+        "Q4105",
+        "Q4107",
+        "Q4114",
+        "Q4116",
+        "Q4122",
+        "Q4124",
+        "Q4128"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Blepharoplasty, Blepharoptosis Repair (Levator Resection) and Brow Lift (Repair of Brow Ptosis)",
+      "codes": [
+        "15820",
+        "15821",
+        "15822",
+        "15823",
+        "67900",
+        "67901",
+        "67902",
+        "67903",
+        "67904",
+        "67906",
+        "67908",
+        "67909"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Carrier Screening for Genetic Diseases",
+      "codes": [
+        "81406",
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Cartilage Implants for Joint Pain",
+      "codes": [
+        "L8699"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Catheter Ablation as Treatment for Atrial Fibrillation",
+      "codes": [
+        "93656"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Circulating Tumor DNA and Circulating Tumor Cells for Cancer Management (Liquid Biopsy)",
+      "codes": [
+        "81406",
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Comprehensive Genetic Profiling for Selecting Targeted Cancer Therapies",
+      "codes": [
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Continuous Glucose Monitoring",
+      "codes": [
+        "0446T",
+        "0447T",
+        "0448T",
+        "A4238",
+        "A4239",
+        "A9276",
+        "A9277",
+        "A9278",
+        "E2102",
+        "E2103",
+        "S1030",
+        "S1031"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Dental Anesthesia",
+      "codes": [
+        "00170"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Diagnosis of Obstructive Sleep Apnea Syndrome",
+      "codes": [
+        "95810",
+        "95811"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Elective Invasive Coronary Angiography (ICA)",
+      "codes": [
+        "93454",
+        "93455",
+        "93456",
+        "93457",
+        "93458",
+        "93459",
+        "93460",
+        "93461"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Elective Percutaneous Coronary Intervention (PCI)",
+      "codes": [
+        "92920",
+        "92924",
+        "92928",
+        "92933",
+        "92937",
+        "92941",
+        "92943",
+        "C1874",
+        "C9600",
+        "C9601",
+        "C9602",
+        "C9603",
+        "C9604",
+        "C9605",
+        "C9607",
+        "C9608"
+      ]
+    },
+    {
+      "kind": "category",
+      "requirement": "prior_auth_delegated",
+      "policy": "Advanced Imaging",
+      "delegate": "RadMD (Evolent / National Imaging Associates)",
+      "category_key": "advanced_imaging"
+    },
+    {
+      "kind": "category",
+      "requirement": "prior_auth_delegated",
+      "policy": "Spine Surgery",
+      "delegate": "RadMD (Evolent / National Imaging Associates)",
+      "category_key": "spine_surgery"
+    },
+    {
+      "kind": "category",
+      "requirement": "prior_auth_delegated",
+      "policy": "Interventional Pain Management",
+      "delegate": "RadMD (Evolent / National Imaging Associates)",
+      "category_key": "interventional_pain"
+    },
+    {
+      "kind": "category",
+      "requirement": "prior_auth_delegated",
+      "policy": "Radiation Oncology",
+      "delegate": "CarePro",
+      "category_key": "oncology"
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "the medical benefit) Oncology Functional Endoscopic Sinus Surgery for Chronic Rhinosinusitis * CalPERS ASO Only",
+      "codes": [
+        "31237",
+        "31238",
+        "31239",
+        "31240",
+        "31241",
+        "31253",
+        "31254",
+        "31255",
+        "31256",
+        "31257",
+        "31259",
+        "31276",
+        "31287",
+        "31288",
+        "31290",
+        "31291",
+        "31292",
+        "31293",
+        "31294",
+        "31295",
+        "31296",
+        "31297",
+        "31298"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Gender Affirmation Surgery",
+      "codes": [
+        "11920",
+        "11921",
+        "11922",
+        "11950",
+        "11951",
+        "11952",
+        "11954",
+        "11960",
+        "11970",
+        "11971",
+        "15770",
+        "15775",
+        "15776",
+        "15777",
+        "15824",
+        "15825",
+        "15826",
+        "15828",
+        "15829",
+        "15832",
+        "15833",
+        "15834",
+        "15835",
+        "15836",
+        "15837",
+        "15838",
+        "15839",
+        "15876",
+        "15877",
+        "15878",
+        "15879",
+        "19300",
+        "19301",
+        "19303",
+        "19318",
+        "19325",
+        "19340",
+        "19342",
+        "19357",
+        "21087",
+        "21088",
+        "21089",
+        "21120",
+        "21121",
+        "21122",
+        "21123",
+        "21125",
+        "21127",
+        "21137",
+        "21138",
+        "21193",
+        "21194",
+        "21195",
+        "21196",
+        "21208",
+        "21209",
+        "21210",
+        "21270",
+        "21299",
+        "30400",
+        "30410",
+        "30420",
+        "30430",
+        "30435",
+        "30450",
+        "31587",
+        "31599",
+        "31750",
+        "53410",
+        "53430",
+        "54125",
+        "54400",
+        "54401",
+        "54405",
+        "54406",
+        "54408",
+        "54410",
+        "54411",
+        "54415",
+        "54416",
+        "54417",
+        "54520",
+        "54660",
+        "54690",
+        "55150",
+        "55175",
+        "55180",
+        "55970",
+        "55980",
+        "56620",
+        "56625",
+        "56800",
+        "56805",
+        "56810",
+        "57106",
+        "57107",
+        "57110",
+        "57111",
+        "57291",
+        "57292",
+        "57295",
+        "57296",
+        "57335",
+        "57426",
+        "57530",
+        "58150",
+        "58180",
+        "58260",
+        "58262",
+        "58263",
+        "58270",
+        "58275",
+        "58280",
+        "58285",
+        "58290",
+        "58291",
+        "58292",
+        "58294",
+        "58541",
+        "58542",
+        "58543",
+        "58544",
+        "58550",
+        "58552",
+        "58553",
+        "58554",
+        "58555",
+        "58570",
+        "58571",
+        "58572",
+        "58573",
+        "58661",
+        "58720",
+        "58940",
+        "92507",
+        "92508",
+        "C1813",
+        "C2622"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "General Approach to Evaluating the Utility of Genetic Panels",
+      "codes": [
+        "81406",
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "General Approach to Genetic Testing",
+      "codes": [
+        "81406",
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Biomarker Testing (Including Liquid Biopsy) for Targeted Treatment in Advanced Cancer",
+      "codes": [
+        "81162",
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Cancer Susceptibility Panels Using Next-Generation Sequencing",
+      "codes": [
+        "81406"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Alzheimer Disease",
+      "codes": [
+        "81406"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Cardiac Ion Channelopathies",
+      "codes": [
+        "81406"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Diagnosis and Management of Mental Health Conditions",
+      "codes": [
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Epilepsy",
+      "codes": [
+        "81406"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Heterozygous Familial Hypercholesterolemia",
+      "codes": [
+        "81406"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Idiopathic Dilated Cardiomyopathy",
+      "codes": [
+        "81406",
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Macular Degeneration",
+      "codes": [
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Marfan Syndrome, Thoracic Aortic Aneurysms and Dissections, and Related Disorders",
+      "codes": [
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Mitochondrial Disorders",
+      "codes": [
+        "81406"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for Predisposition to Inherited Hypertrophic Cardiomyopathy",
+      "codes": [
+        "81406",
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Genetic Testing for the Diagnosis of Inherited Peripheral Neuropathies",
+      "codes": [
+        "81406",
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Germline Genetic Testing for Hereditary Breast/Ovarian Cancer Syndrome and Other High-Risk Cancers (BRCA1, BRCA2, PALB2)",
+      "codes": [
+        "81162"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Heart Transplant",
+      "codes": [
+        "33945"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Heart/Lung Transplant",
+      "codes": [
+        "33935"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Acute Lymphoblastic Leukemia",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241",
+        "86813",
+        "86817"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Acute Myeloid Leukemia",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241",
+        "38242"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Autoimmune Diseases",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Central Nervous System Embryonal Tumors and Ependymoma",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Chronic Lymphocytic Leukemia/Small Lymphocytic Lymphoma",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241",
+        "38242"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Chronic Myeloid Leukemia",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Epithelial Ovarian Cancer",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38230",
+        "38240",
+        "38241",
+        "38242"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Hodgkin Lymphoma",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241",
+        "86813",
+        "86817"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Miscellaneous Solid Tumors in Adults",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38240",
+        "38241"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Non-Hodgkin Lymphomas",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Plasma Cell Dyscrasias, Including Multiple Myeloma and POEMS Syndrome",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Primary Amyloidosis",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation for Solid Tumors of Childhood",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241",
+        "86813",
+        "86817"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hematopoietic Cell Transplantation in the Treatment of Germ Cell Tumors",
+      "codes": [
+        "38204",
+        "38205",
+        "38206",
+        "38207",
+        "38230",
+        "38240",
+        "38241",
+        "86813",
+        "86817"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "High Intensity Laser Therapy for Chronic Musculoskeletal Pain Conditions and Bell''s Palsy",
+      "codes": [
+        "97799"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hip Arthroplasty for Adults",
+      "codes": [
+        "27130"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hyperbaric Oxygen Therapy",
+      "codes": [
+        "99183",
+        "G0277"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Hysterectomy Surgery for Benign Conditions",
+      "codes": [
+        "51925",
+        "58150",
+        "58152",
+        "58180",
+        "58200",
+        "58210",
+        "58240",
+        "58260",
+        "58262",
+        "58263",
+        "58267",
+        "58270",
+        "58275",
+        "58280",
+        "58285",
+        "58290",
+        "58291",
+        "58292",
+        "58294",
+        "58541",
+        "58542",
+        "58543",
+        "58544",
+        "58548",
+        "58550",
+        "58552",
+        "58553",
+        "58554",
+        "58570",
+        "58571",
+        "58572",
+        "58573",
+        "58951",
+        "58953",
+        "58954",
+        "58956",
+        "59525"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Implantable Cardioverter Defibrillators",
+      "codes": [
+        "33216",
+        "33217",
+        "33230",
+        "33231",
+        "33240",
+        "33249",
+        "33262",
+        "33263",
+        "33264",
+        "93287",
+        "C1721",
+        "C1722",
+        "C1777",
+        "C1882",
+        "C1895",
+        "C1896",
+        "G0448"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Implantable Peripheral Nerve Stimulation for Chronic Pain Conditions",
+      "codes": [
+        "C1767",
+        "C1778"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Isolated Small Bowel Transplant",
+      "codes": [
+        "44135",
+        "44136"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Knee Arthroplasty for Adults",
+      "codes": [
+        "27447",
+        "27486",
+        "27487",
+        "27488"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Liposuction for Lipedema and Lymphedema",
+      "codes": [
+        "15877",
+        "15878",
+        "15879"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Liver Transplant and Combined Liver- Kidney Transplant",
+      "codes": [
+        "47135"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Lung and Lobar Lung Transplant",
+      "codes": [
+        "32851",
+        "32852",
+        "32853",
+        "32854",
+        "S2060"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Molecular Genomic Profiling for Cancers of Unknown Primary",
+      "codes": [
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Monitored Anesthesia Care * CalPERS ASO Only",
+      "codes": [
+        "00811",
+        "00812",
+        "00813"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Nasal Septoplasty",
+      "codes": [
+        "30520",
+        "30620"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Non-emergency Ground Ambulance",
+      "codes": [
+        "A0426",
+        "A0428"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Noninvasive Prenatal Screening for Fetal Aneuploidies, Microdeletions, Single-Gene Disorders, and Twin Zygosity Using Cell- Free Fetal DNA",
+      "codes": [
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Occupational Therapy * CalPERS ASO Only",
+      "codes": [
+        "20560",
+        "20561",
+        "97010",
+        "97012",
+        "97014",
+        "97016",
+        "97018",
+        "97022",
+        "97024",
+        "97028",
+        "97032",
+        "97033",
+        "97034",
+        "97035",
+        "97036",
+        "97110",
+        "97112",
+        "97113",
+        "97116",
+        "97124",
+        "97140",
+        "97165",
+        "97166",
+        "97167",
+        "97168",
+        "97169",
+        "97170",
+        "97171",
+        "97172",
+        "97530",
+        "97535",
+        "97537",
+        "97542",
+        "97545",
+        "97546",
+        "97761",
+        "97763",
+        "G0129",
+        "G0158",
+        "G0160",
+        "G0237",
+        "G0238",
+        "G0239",
+        "S8940",
+        "S8948",
+        "S8990",
+        "S9117",
+        "S9129"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Orthognathic Surgery",
+      "codes": [
+        "21085",
+        "21110",
+        "21120",
+        "21121",
+        "21122",
+        "21123",
+        "21125",
+        "21127",
+        "21141",
+        "21142",
+        "21143",
+        "21145",
+        "21146",
+        "21147",
+        "21150",
+        "21151",
+        "21154",
+        "21155",
+        "21159",
+        "21160",
+        "21188",
+        "21193",
+        "21194",
+        "21195",
+        "21196",
+        "21198",
+        "21199",
+        "21206",
+        "21208",
+        "21209",
+        "21210",
+        "21215",
+        "21230",
+        "21247",
+        "D7940",
+        "D7941",
+        "D7943",
+        "D7944",
+        "D7945",
+        "D7946",
+        "D7947",
+        "D7948",
+        "D7949",
+        "D7950",
+        "D7995",
+        "D7996"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Outpatient Pulmonary Rehabilitation",
+      "codes": [
+        "97799"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Paraspinal Surface Electromyography to Evaluate and Monitor Back Pain",
+      "codes": [
+        "97799"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Personalized Breast Cancer Screening Clinical Trial",
+      "codes": [
+        "81162"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Pharmacogenetic Testing for Pain Management",
+      "codes": [
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Physical Therapy * CalPERS ASO Only",
+      "codes": [
+        "97010",
+        "97012",
+        "97014",
+        "97016",
+        "97018",
+        "97022",
+        "97024",
+        "97026",
+        "97028",
+        "97032",
+        "97033",
+        "97034",
+        "97035",
+        "97036",
+        "97039",
+        "97110",
+        "97112",
+        "97113",
+        "97116",
+        "97124",
+        "97139",
+        "97140",
+        "97150",
+        "97530"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Policy Name/ProgramProcedure Code (To search, Press Ctrl + F)",
+      "codes": [
+        "97533",
+        "97535",
+        "97597",
+        "97598",
+        "97602",
+        "97750",
+        "97799",
+        "G0281",
+        "G0283",
+        "G0329"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Polysomnography for Non-Respiratory Sleep Disorders",
+      "codes": [
+        "95810",
+        "95811"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Preimplantation Genetic Testing",
+      "codes": [
+        "81162",
+        "81223",
+        "81406",
+        "81479"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Reconstructive Breast Surgery/Management of Breast Implants",
+      "codes": [
+        "19328",
+        "19330",
+        "19340",
+        "19342",
+        "19370",
+        "19371",
+        "C1789",
+        "L8030",
+        "L8039",
+        "L8600"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Reconstructive Services",
+      "codes": [
+        "11950",
+        "11951",
+        "11952",
+        "11954",
+        "15770",
+        "15775",
+        "15776",
+        "15777",
+        "15824",
+        "15825",
+        "15826",
+        "15828",
+        "15829",
+        "15832",
+        "15833",
+        "15834",
+        "15835",
+        "15836",
+        "15837",
+        "15838",
+        "15839",
+        "15876",
+        "15877",
+        "15878",
+        "15879",
+        "19325",
+        "19350",
+        "19355",
+        "19357",
+        "19370",
+        "21087",
+        "21088",
+        "21089",
+        "21120",
+        "21121",
+        "21122",
+        "21123",
+        "21125",
+        "21127",
+        "21137",
+        "21138",
+        "21193",
+        "21194",
+        "21195",
+        "21196",
+        "21208",
+        "21209",
+        "21210",
+        "21270",
+        "21299",
+        "30400",
+        "30410",
+        "30420",
+        "30430",
+        "30435",
+        "30450",
+        "31587",
+        "31599",
+        "31750",
+        "57335",
+        "92507",
+        "92508"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Reduction Mammaplasty for Breast- Related Symptoms",
+      "codes": [
+        "19318"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Skeletal Remodeling",
+      "codes": [
+        "21600",
+        "21899"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Small Bowel/Liver and Multivisceral Transplant",
+      "codes": [
+        "47135"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Speech Therapy* CalPERS ASO Only",
+      "codes": [
+        "92507",
+        "92508",
+        "92521",
+        "92522",
+        "92523",
+        "92524",
+        "92526",
+        "92610",
+        "G0153",
+        "G0161",
+        "S9128",
+        "S9152"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Spinal Cord and Dorsal Root Ganglion Stimulation",
+      "codes": [
+        "C1767",
+        "C1778"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Surgical Treatment of Snoring and Obstructive Sleep Apnea Syndrome",
+      "codes": [
+        "21685",
+        "41512",
+        "41530",
+        "42145",
+        "42299",
+        "C1767",
+        "C1778"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Total Artificial Hearts and Implantable Ventricular Assist Devices",
+      "codes": [
+        "33927",
+        "33928",
+        "33929"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Treatment of Varicose Veins/Venous Insufficiency",
+      "codes": [
+        "36465",
+        "36466",
+        "36468",
+        "36470",
+        "36471",
+        "36475",
+        "36476",
+        "36478",
+        "36479",
+        "36482",
+        "36483",
+        "37765",
+        "37766",
+        "S2202"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Vagus Nerve Stimulation",
+      "codes": [
+        "C1767"
+      ]
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Whole Exome and Whole Genome Sequencing for Diagnosis of Genetic Disorders",
+      "codes": [
+        "81415",
+        "81416"
+      ]
+    }
+  ],
+  "changelog": {
+    "added": [],
+    "removed": []
+  },
+  "stats": {
+    "code_rules": 108,
+    "category_rules": 4,
+    "distinct_codes": 609
+  }
+}

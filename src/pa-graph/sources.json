@@ -1,0 +1,33 @@
+{
+  "comment": "Source registry for the real California PA graph. Adding a payer = add entries here + a parser module. Cadence is informational; fetches are manual/scheduled via the CLI.",
+  "sources": [
+    {
+      "id": "blueshield-commercial-pa-list",
+      "payer_id": "blueshield_ca",
+      "payer_name": "Blue Shield of California",
+      "lob": "commercial",
+      "kind": "pa_code_list",
+      "url": "https://www.blueshieldca.com/content/dam/bsca/en/provider/docs/BSC-Prior-Auth-List.pdf",
+      "parser": "bsc-list",
+      "cadence": "monthly",
+      "notes": "Single PDF, updated monthly, carries its own effective date. Advanced imaging / spine surgery / pain management delegated to RadMD (Evolent/NIA); radiation + medical oncology delegated to CarePro. Delegate code lists are separate future sources."
+    },
+    {
+      "id": "dmhc-imr-determinations",
+      "payer_id": null,
+      "payer_name": "All DMHC-regulated plans (payer-anonymous)",
+      "lob": null,
+      "kind": "imr_outcomes",
+      "url": "https://data.chhs.ca.gov/dataset/b79b3447-4c10-4ae6-84e2-1076f83bb24e/resource/3340c5d7-4054-4d03-90e0-5f44290ed095/download/independent-medical-review-imr-determinations-trends.csv",
+      "parser": "imr-csv",
+      "cadence": "yearly",
+      "notes": "Every IMR since 2001. This trend file does NOT name the health plan, so evidence is state-wide per treatment category, never per payer."
+    }
+  ],
+  "planned": [
+    { "payer_id": "anthem_ca", "payer_name": "Anthem Blue Cross of California", "lobs": ["commercial", "medi-cal", "medicare_advantage"] },
+    { "payer_id": "healthnet_ca", "payer_name": "Health Net of California", "lobs": ["commercial", "medi-cal", "medicare_advantage"] },
+    { "payer_id": "uhc_ca", "payer_name": "UnitedHealthcare of California", "lobs": ["commercial", "medicare_advantage"] },
+    { "payer_id": "kaiser_ca", "payer_name": "Kaiser Permanente (California)", "lobs": ["commercial", "medi-cal", "medicare_advantage"], "notes": "Integrated model; mostly referral-based rather than external PA." }
+  ]
+}

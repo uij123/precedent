@@ -1,0 +1,3527 @@
+{
+  "source_id": "dmhc-imr-determinations",
+  "rows": 42749,
+  "note": "State-wide DMHC IMR outcomes; the public trend file does not name plans.",
+  "categories": [
+    {
+      "category": "Pharmacy",
+      "total": 11948,
+      "upheld": 4743,
+      "overturned": 7205,
+      "years": {
+        "2001": {
+          "total": 7,
+          "overturned": 0
+        },
+        "2002": {
+          "total": 140,
+          "overturned": 44
+        },
+        "2003": {
+          "total": 177,
+          "overturned": 72
+        },
+        "2004": {
+          "total": 215,
+          "overturned": 86
+        },
+        "2005": {
+          "total": 264,
+          "overturned": 100
+        },
+        "2006": {
+          "total": 286,
+          "overturned": 144
+        },
+        "2007": {
+          "total": 402,
+          "overturned": 206
+        },
+        "2008": {
+          "total": 358,
+          "overturned": 157
+        },
+        "2009": {
+          "total": 310,
+          "overturned": 147
+        },
+        "2010": {
+          "total": 303,
+          "overturned": 139
+        },
+        "2011": {
+          "total": 189,
+          "overturned": 75
+        },
+        "2012": {
+          "total": 174,
+          "overturned": 71
+        },
+        "2013": {
+          "total": 240,
+          "overturned": 81
+        },
+        "2014": {
+          "total": 277,
+          "overturned": 115
+        },
+        "2015": {
+          "total": 726,
+          "overturned": 469
+        },
+        "2016": {
+          "total": 829,
+          "overturned": 468
+        },
+        "2017": {
+          "total": 794,
+          "overturned": 470
+        },
+        "2018": {
+          "total": 743,
+          "overturned": 431
+        },
+        "2019": {
+          "total": 532,
+          "overturned": 268
+        },
+        "2020": {
+          "total": 609,
+          "overturned": 390
+        },
+        "2021": {
+          "total": 541,
+          "overturned": 370
+        },
+        "2022": {
+          "total": 428,
+          "overturned": 285
+        },
+        "2023": {
+          "total": 731,
+          "overturned": 539
+        },
+        "2024": {
+          "total": 1199,
+          "overturned": 879
+        },
+        "2025": {
+          "total": 1232,
+          "overturned": 1007
+        },
+        "2026": {
+          "total": 242,
+          "overturned": 192
+        }
+      },
+      "overturn_rate": 0.603
+    },
+    {
+      "category": "Diag Imag & Screen",
+      "total": 5994,
+      "upheld": 3087,
+      "overturned": 2907,
+      "years": {
+        "2001": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2002": {
+          "total": 53,
+          "overturned": 13
+        },
+        "2003": {
+          "total": 58,
+          "overturned": 19
+        },
+        "2004": {
+          "total": 57,
+          "overturned": 23
+        },
+        "2005": {
+          "total": 61,
+          "overturned": 20
+        },
+        "2006": {
+          "total": 120,
+          "overturned": 52
+        },
+        "2007": {
+          "total": 188,
+          "overturned": 89
+        },
+        "2008": {
+          "total": 180,
+          "overturned": 61
+        },
+        "2009": {
+          "total": 166,
+          "overturned": 64
+        },
+        "2010": {
+          "total": 168,
+          "overturned": 65
+        },
+        "2011": {
+          "total": 159,
+          "overturned": 55
+        },
+        "2012": {
+          "total": 133,
+          "overturned": 57
+        },
+        "2013": {
+          "total": 116,
+          "overturned": 43
+        },
+        "2014": {
+          "total": 195,
+          "overturned": 74
+        },
+        "2015": {
+          "total": 404,
+          "overturned": 214
+        },
+        "2016": {
+          "total": 965,
+          "overturned": 701
+        },
+        "2017": {
+          "total": 599,
+          "overturned": 272
+        },
+        "2018": {
+          "total": 507,
+          "overturned": 203
+        },
+        "2019": {
+          "total": 345,
+          "overturned": 151
+        },
+        "2020": {
+          "total": 257,
+          "overturned": 132
+        },
+        "2021": {
+          "total": 227,
+          "overturned": 98
+        },
+        "2022": {
+          "total": 236,
+          "overturned": 101
+        },
+        "2023": {
+          "total": 273,
+          "overturned": 138
+        },
+        "2024": {
+          "total": 268,
+          "overturned": 127
+        },
+        "2025": {
+          "total": 249,
+          "overturned": 133
+        },
+        "2026": {
+          "total": 8,
+          "overturned": 2
+        }
+      },
+      "overturn_rate": 0.485
+    },
+    {
+      "category": "Mental Health",
+      "total": 4835,
+      "upheld": 1984,
+      "overturned": 2851,
+      "years": {
+        "2002": {
+          "total": 29,
+          "overturned": 12
+        },
+        "2003": {
+          "total": 39,
+          "overturned": 19
+        },
+        "2004": {
+          "total": 41,
+          "overturned": 15
+        },
+        "2005": {
+          "total": 61,
+          "overturned": 26
+        },
+        "2006": {
+          "total": 85,
+          "overturned": 33
+        },
+        "2007": {
+          "total": 100,
+          "overturned": 38
+        },
+        "2008": {
+          "total": 114,
+          "overturned": 50
+        },
+        "2009": {
+          "total": 138,
+          "overturned": 75
+        },
+        "2010": {
+          "total": 156,
+          "overturned": 86
+        },
+        "2011": {
+          "total": 153,
+          "overturned": 50
+        },
+        "2012": {
+          "total": 129,
+          "overturned": 80
+        },
+        "2013": {
+          "total": 144,
+          "overturned": 81
+        },
+        "2014": {
+          "total": 244,
+          "overturned": 115
+        },
+        "2015": {
+          "total": 187,
+          "overturned": 100
+        },
+        "2016": {
+          "total": 252,
+          "overturned": 98
+        },
+        "2017": {
+          "total": 353,
+          "overturned": 105
+        },
+        "2018": {
+          "total": 337,
+          "overturned": 133
+        },
+        "2019": {
+          "total": 317,
+          "overturned": 165
+        },
+        "2020": {
+          "total": 388,
+          "overturned": 320
+        },
+        "2021": {
+          "total": 365,
+          "overturned": 271
+        },
+        "2022": {
+          "total": 268,
+          "overturned": 218
+        },
+        "2023": {
+          "total": 384,
+          "overturned": 299
+        },
+        "2024": {
+          "total": 283,
+          "overturned": 226
+        },
+        "2025": {
+          "total": 264,
+          "overturned": 232
+        },
+        "2026": {
+          "total": 4,
+          "overturned": 4
+        }
+      },
+      "overturn_rate": 0.5897
+    },
+    {
+      "category": "DME",
+      "total": 2679,
+      "upheld": 1483,
+      "overturned": 1196,
+      "years": {
+        "2001": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2002": {
+          "total": 49,
+          "overturned": 7
+        },
+        "2003": {
+          "total": 55,
+          "overturned": 18
+        },
+        "2004": {
+          "total": 62,
+          "overturned": 18
+        },
+        "2005": {
+          "total": 91,
+          "overturned": 25
+        },
+        "2006": {
+          "total": 95,
+          "overturned": 44
+        },
+        "2007": {
+          "total": 100,
+          "overturned": 39
+        },
+        "2008": {
+          "total": 132,
+          "overturned": 63
+        },
+        "2009": {
+          "total": 115,
+          "overturned": 58
+        },
+        "2010": {
+          "total": 99,
+          "overturned": 42
+        },
+        "2011": {
+          "total": 87,
+          "overturned": 27
+        },
+        "2012": {
+          "total": 77,
+          "overturned": 28
+        },
+        "2013": {
+          "total": 87,
+          "overturned": 34
+        },
+        "2014": {
+          "total": 120,
+          "overturned": 43
+        },
+        "2015": {
+          "total": 119,
+          "overturned": 46
+        },
+        "2016": {
+          "total": 128,
+          "overturned": 53
+        },
+        "2017": {
+          "total": 134,
+          "overturned": 55
+        },
+        "2018": {
+          "total": 149,
+          "overturned": 72
+        },
+        "2019": {
+          "total": 157,
+          "overturned": 75
+        },
+        "2020": {
+          "total": 141,
+          "overturned": 68
+        },
+        "2021": {
+          "total": 138,
+          "overturned": 67
+        },
+        "2022": {
+          "total": 111,
+          "overturned": 65
+        },
+        "2023": {
+          "total": 117,
+          "overturned": 66
+        },
+        "2024": {
+          "total": 150,
+          "overturned": 91
+        },
+        "2025": {
+          "total": 163,
+          "overturned": 91
+        },
+        "2026": {
+          "total": 2,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0.4464
+    },
+    {
+      "category": "Pain Management",
+      "total": 1827,
+      "upheld": 590,
+      "overturned": 1237,
+      "years": {
+        "2001": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2002": {
+          "total": 4,
+          "overturned": 0
+        },
+        "2003": {
+          "total": 4,
+          "overturned": 1
+        },
+        "2004": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2005": {
+          "total": 9,
+          "overturned": 3
+        },
+        "2006": {
+          "total": 12,
+          "overturned": 5
+        },
+        "2007": {
+          "total": 14,
+          "overturned": 7
+        },
+        "2008": {
+          "total": 11,
+          "overturned": 4
+        },
+        "2009": {
+          "total": 25,
+          "overturned": 10
+        },
+        "2010": {
+          "total": 9,
+          "overturned": 5
+        },
+        "2011": {
+          "total": 14,
+          "overturned": 8
+        },
+        "2012": {
+          "total": 26,
+          "overturned": 10
+        },
+        "2013": {
+          "total": 20,
+          "overturned": 2
+        },
+        "2014": {
+          "total": 33,
+          "overturned": 3
+        },
+        "2015": {
+          "total": 33,
+          "overturned": 6
+        },
+        "2016": {
+          "total": 74,
+          "overturned": 25
+        },
+        "2017": {
+          "total": 104,
+          "overturned": 38
+        },
+        "2018": {
+          "total": 111,
+          "overturned": 60
+        },
+        "2019": {
+          "total": 222,
+          "overturned": 161
+        },
+        "2020": {
+          "total": 157,
+          "overturned": 139
+        },
+        "2021": {
+          "total": 187,
+          "overturned": 172
+        },
+        "2022": {
+          "total": 178,
+          "overturned": 139
+        },
+        "2023": {
+          "total": 174,
+          "overturned": 129
+        },
+        "2024": {
+          "total": 197,
+          "overturned": 147
+        },
+        "2025": {
+          "total": 202,
+          "overturned": 159
+        },
+        "2026": {
+          "total": 3,
+          "overturned": 2
+        }
+      },
+      "overturn_rate": 0.6771
+    },
+    {
+      "category": "Orthopedic Proc",
+      "total": 1676,
+      "upheld": 1183,
+      "overturned": 493,
+      "years": {
+        "2001": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2002": {
+          "total": 35,
+          "overturned": 13
+        },
+        "2003": {
+          "total": 31,
+          "overturned": 10
+        },
+        "2004": {
+          "total": 36,
+          "overturned": 19
+        },
+        "2005": {
+          "total": 58,
+          "overturned": 5
+        },
+        "2006": {
+          "total": 65,
+          "overturned": 16
+        },
+        "2007": {
+          "total": 70,
+          "overturned": 11
+        },
+        "2008": {
+          "total": 81,
+          "overturned": 22
+        },
+        "2009": {
+          "total": 80,
+          "overturned": 17
+        },
+        "2010": {
+          "total": 73,
+          "overturned": 8
+        },
+        "2011": {
+          "total": 78,
+          "overturned": 7
+        },
+        "2012": {
+          "total": 72,
+          "overturned": 11
+        },
+        "2013": {
+          "total": 62,
+          "overturned": 16
+        },
+        "2014": {
+          "total": 76,
+          "overturned": 17
+        },
+        "2015": {
+          "total": 86,
+          "overturned": 12
+        },
+        "2016": {
+          "total": 88,
+          "overturned": 38
+        },
+        "2017": {
+          "total": 91,
+          "overturned": 40
+        },
+        "2018": {
+          "total": 80,
+          "overturned": 43
+        },
+        "2019": {
+          "total": 67,
+          "overturned": 36
+        },
+        "2020": {
+          "total": 67,
+          "overturned": 36
+        },
+        "2021": {
+          "total": 84,
+          "overturned": 30
+        },
+        "2022": {
+          "total": 72,
+          "overturned": 21
+        },
+        "2023": {
+          "total": 65,
+          "overturned": 18
+        },
+        "2024": {
+          "total": 82,
+          "overturned": 20
+        },
+        "2025": {
+          "total": 74,
+          "overturned": 26
+        },
+        "2026": {
+          "total": 1,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0.2942
+    },
+    {
+      "category": "Cancer Care",
+      "total": 1625,
+      "upheld": 917,
+      "overturned": 708,
+      "years": {
+        "2001": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2002": {
+          "total": 21,
+          "overturned": 7
+        },
+        "2003": {
+          "total": 31,
+          "overturned": 11
+        },
+        "2004": {
+          "total": 32,
+          "overturned": 8
+        },
+        "2005": {
+          "total": 59,
+          "overturned": 13
+        },
+        "2006": {
+          "total": 71,
+          "overturned": 30
+        },
+        "2007": {
+          "total": 83,
+          "overturned": 36
+        },
+        "2008": {
+          "total": 83,
+          "overturned": 35
+        },
+        "2009": {
+          "total": 88,
+          "overturned": 32
+        },
+        "2010": {
+          "total": 71,
+          "overturned": 33
+        },
+        "2011": {
+          "total": 44,
+          "overturned": 14
+        },
+        "2012": {
+          "total": 37,
+          "overturned": 14
+        },
+        "2013": {
+          "total": 26,
+          "overturned": 7
+        },
+        "2014": {
+          "total": 51,
+          "overturned": 19
+        },
+        "2015": {
+          "total": 53,
+          "overturned": 20
+        },
+        "2016": {
+          "total": 69,
+          "overturned": 35
+        },
+        "2017": {
+          "total": 108,
+          "overturned": 50
+        },
+        "2018": {
+          "total": 87,
+          "overturned": 37
+        },
+        "2019": {
+          "total": 64,
+          "overturned": 31
+        },
+        "2020": {
+          "total": 57,
+          "overturned": 18
+        },
+        "2021": {
+          "total": 88,
+          "overturned": 33
+        },
+        "2022": {
+          "total": 85,
+          "overturned": 45
+        },
+        "2023": {
+          "total": 101,
+          "overturned": 52
+        },
+        "2024": {
+          "total": 110,
+          "overturned": 69
+        },
+        "2025": {
+          "total": 102,
+          "overturned": 57
+        },
+        "2026": {
+          "total": 2,
+          "overturned": 2
+        }
+      },
+      "overturn_rate": 0.4357
+    },
+    {
+      "category": "Gen Surg Proc",
+      "total": 1453,
+      "upheld": 751,
+      "overturned": 702,
+      "years": {
+        "2001": {
+          "total": 4,
+          "overturned": 2
+        },
+        "2002": {
+          "total": 93,
+          "overturned": 43
+        },
+        "2003": {
+          "total": 104,
+          "overturned": 54
+        },
+        "2004": {
+          "total": 82,
+          "overturned": 51
+        },
+        "2005": {
+          "total": 67,
+          "overturned": 32
+        },
+        "2006": {
+          "total": 67,
+          "overturned": 32
+        },
+        "2007": {
+          "total": 63,
+          "overturned": 38
+        },
+        "2008": {
+          "total": 74,
+          "overturned": 42
+        },
+        "2009": {
+          "total": 75,
+          "overturned": 48
+        },
+        "2010": {
+          "total": 75,
+          "overturned": 54
+        },
+        "2011": {
+          "total": 55,
+          "overturned": 19
+        },
+        "2012": {
+          "total": 47,
+          "overturned": 22
+        },
+        "2013": {
+          "total": 76,
+          "overturned": 25
+        },
+        "2014": {
+          "total": 57,
+          "overturned": 21
+        },
+        "2015": {
+          "total": 47,
+          "overturned": 16
+        },
+        "2016": {
+          "total": 76,
+          "overturned": 24
+        },
+        "2017": {
+          "total": 89,
+          "overturned": 31
+        },
+        "2018": {
+          "total": 67,
+          "overturned": 23
+        },
+        "2019": {
+          "total": 50,
+          "overturned": 23
+        },
+        "2020": {
+          "total": 27,
+          "overturned": 15
+        },
+        "2021": {
+          "total": 41,
+          "overturned": 14
+        },
+        "2022": {
+          "total": 33,
+          "overturned": 15
+        },
+        "2023": {
+          "total": 27,
+          "overturned": 16
+        },
+        "2024": {
+          "total": 25,
+          "overturned": 17
+        },
+        "2025": {
+          "total": 31,
+          "overturned": 24
+        },
+        "2026": {
+          "total": 1,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.4831
+    },
+    {
+      "category": "Rehab/ Svc - Outpt",
+      "total": 1384,
+      "upheld": 624,
+      "overturned": 760,
+      "years": {
+        "2001": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2002": {
+          "total": 50,
+          "overturned": 17
+        },
+        "2003": {
+          "total": 44,
+          "overturned": 13
+        },
+        "2004": {
+          "total": 39,
+          "overturned": 10
+        },
+        "2005": {
+          "total": 72,
+          "overturned": 24
+        },
+        "2006": {
+          "total": 69,
+          "overturned": 15
+        },
+        "2007": {
+          "total": 93,
+          "overturned": 28
+        },
+        "2008": {
+          "total": 77,
+          "overturned": 49
+        },
+        "2009": {
+          "total": 95,
+          "overturned": 74
+        },
+        "2010": {
+          "total": 78,
+          "overturned": 57
+        },
+        "2011": {
+          "total": 231,
+          "overturned": 205
+        },
+        "2012": {
+          "total": 114,
+          "overturned": 96
+        },
+        "2013": {
+          "total": 32,
+          "overturned": 20
+        },
+        "2014": {
+          "total": 28,
+          "overturned": 11
+        },
+        "2015": {
+          "total": 27,
+          "overturned": 8
+        },
+        "2016": {
+          "total": 33,
+          "overturned": 15
+        },
+        "2017": {
+          "total": 32,
+          "overturned": 10
+        },
+        "2018": {
+          "total": 37,
+          "overturned": 18
+        },
+        "2019": {
+          "total": 35,
+          "overturned": 15
+        },
+        "2020": {
+          "total": 38,
+          "overturned": 13
+        },
+        "2021": {
+          "total": 48,
+          "overturned": 15
+        },
+        "2022": {
+          "total": 28,
+          "overturned": 11
+        },
+        "2023": {
+          "total": 24,
+          "overturned": 12
+        },
+        "2024": {
+          "total": 34,
+          "overturned": 14
+        },
+        "2025": {
+          "total": 24,
+          "overturned": 10
+        },
+        "2026": {
+          "total": 1,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0.5491
+    },
+    {
+      "category": "Reconstr/Plast Proc",
+      "total": 1310,
+      "upheld": 712,
+      "overturned": 598,
+      "years": {
+        "2001": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2002": {
+          "total": 28,
+          "overturned": 18
+        },
+        "2003": {
+          "total": 33,
+          "overturned": 10
+        },
+        "2004": {
+          "total": 62,
+          "overturned": 15
+        },
+        "2005": {
+          "total": 49,
+          "overturned": 11
+        },
+        "2006": {
+          "total": 39,
+          "overturned": 9
+        },
+        "2007": {
+          "total": 51,
+          "overturned": 12
+        },
+        "2008": {
+          "total": 41,
+          "overturned": 13
+        },
+        "2009": {
+          "total": 34,
+          "overturned": 5
+        },
+        "2010": {
+          "total": 37,
+          "overturned": 10
+        },
+        "2011": {
+          "total": 35,
+          "overturned": 17
+        },
+        "2012": {
+          "total": 46,
+          "overturned": 19
+        },
+        "2013": {
+          "total": 37,
+          "overturned": 12
+        },
+        "2014": {
+          "total": 36,
+          "overturned": 18
+        },
+        "2015": {
+          "total": 41,
+          "overturned": 24
+        },
+        "2016": {
+          "total": 60,
+          "overturned": 33
+        },
+        "2017": {
+          "total": 74,
+          "overturned": 52
+        },
+        "2018": {
+          "total": 107,
+          "overturned": 72
+        },
+        "2019": {
+          "total": 117,
+          "overturned": 67
+        },
+        "2020": {
+          "total": 96,
+          "overturned": 51
+        },
+        "2021": {
+          "total": 64,
+          "overturned": 38
+        },
+        "2022": {
+          "total": 46,
+          "overturned": 26
+        },
+        "2023": {
+          "total": 49,
+          "overturned": 17
+        },
+        "2024": {
+          "total": 53,
+          "overturned": 16
+        },
+        "2025": {
+          "total": 71,
+          "overturned": 33
+        },
+        "2026": {
+          "total": 3,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0.4565
+    },
+    {
+      "category": "Elect/Therm/Radfreq",
+      "total": 1115,
+      "upheld": 636,
+      "overturned": 479,
+      "years": {
+        "2001": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2002": {
+          "total": 32,
+          "overturned": 6
+        },
+        "2003": {
+          "total": 24,
+          "overturned": 4
+        },
+        "2004": {
+          "total": 26,
+          "overturned": 7
+        },
+        "2005": {
+          "total": 18,
+          "overturned": 7
+        },
+        "2006": {
+          "total": 29,
+          "overturned": 10
+        },
+        "2007": {
+          "total": 27,
+          "overturned": 10
+        },
+        "2008": {
+          "total": 31,
+          "overturned": 9
+        },
+        "2009": {
+          "total": 43,
+          "overturned": 12
+        },
+        "2010": {
+          "total": 52,
+          "overturned": 15
+        },
+        "2011": {
+          "total": 88,
+          "overturned": 34
+        },
+        "2012": {
+          "total": 86,
+          "overturned": 41
+        },
+        "2013": {
+          "total": 75,
+          "overturned": 35
+        },
+        "2014": {
+          "total": 51,
+          "overturned": 12
+        },
+        "2015": {
+          "total": 65,
+          "overturned": 28
+        },
+        "2016": {
+          "total": 63,
+          "overturned": 30
+        },
+        "2017": {
+          "total": 49,
+          "overturned": 20
+        },
+        "2018": {
+          "total": 61,
+          "overturned": 24
+        },
+        "2019": {
+          "total": 48,
+          "overturned": 30
+        },
+        "2020": {
+          "total": 36,
+          "overturned": 26
+        },
+        "2021": {
+          "total": 54,
+          "overturned": 34
+        },
+        "2022": {
+          "total": 46,
+          "overturned": 26
+        },
+        "2023": {
+          "total": 40,
+          "overturned": 22
+        },
+        "2024": {
+          "total": 33,
+          "overturned": 16
+        },
+        "2025": {
+          "total": 37,
+          "overturned": 21
+        }
+      },
+      "overturn_rate": 0.4296
+    },
+    {
+      "category": "Autism Related Tx",
+      "total": 1040,
+      "upheld": 317,
+      "overturned": 723,
+      "years": {
+        "2002": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2004": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2005": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2008": {
+          "total": 42,
+          "overturned": 29
+        },
+        "2009": {
+          "total": 31,
+          "overturned": 23
+        },
+        "2010": {
+          "total": 81,
+          "overturned": 71
+        },
+        "2011": {
+          "total": 111,
+          "overturned": 105
+        },
+        "2012": {
+          "total": 90,
+          "overturned": 76
+        },
+        "2013": {
+          "total": 70,
+          "overturned": 49
+        },
+        "2014": {
+          "total": 53,
+          "overturned": 26
+        },
+        "2015": {
+          "total": 41,
+          "overturned": 28
+        },
+        "2016": {
+          "total": 89,
+          "overturned": 65
+        },
+        "2017": {
+          "total": 96,
+          "overturned": 66
+        },
+        "2018": {
+          "total": 54,
+          "overturned": 30
+        },
+        "2019": {
+          "total": 62,
+          "overturned": 37
+        },
+        "2020": {
+          "total": 43,
+          "overturned": 27
+        },
+        "2021": {
+          "total": 44,
+          "overturned": 22
+        },
+        "2022": {
+          "total": 29,
+          "overturned": 12
+        },
+        "2023": {
+          "total": 31,
+          "overturned": 17
+        },
+        "2024": {
+          "total": 29,
+          "overturned": 12
+        },
+        "2025": {
+          "total": 39,
+          "overturned": 25
+        }
+      },
+      "overturn_rate": 0.6952
+    },
+    {
+      "category": "Diag/ MD Eval",
+      "total": 776,
+      "upheld": 406,
+      "overturned": 370,
+      "years": {
+        "2001": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2002": {
+          "total": 56,
+          "overturned": 24
+        },
+        "2003": {
+          "total": 36,
+          "overturned": 19
+        },
+        "2004": {
+          "total": 47,
+          "overturned": 21
+        },
+        "2005": {
+          "total": 18,
+          "overturned": 8
+        },
+        "2006": {
+          "total": 21,
+          "overturned": 11
+        },
+        "2007": {
+          "total": 25,
+          "overturned": 10
+        },
+        "2008": {
+          "total": 33,
+          "overturned": 9
+        },
+        "2009": {
+          "total": 33,
+          "overturned": 16
+        },
+        "2010": {
+          "total": 48,
+          "overturned": 17
+        },
+        "2011": {
+          "total": 23,
+          "overturned": 7
+        },
+        "2012": {
+          "total": 28,
+          "overturned": 10
+        },
+        "2013": {
+          "total": 31,
+          "overturned": 18
+        },
+        "2014": {
+          "total": 27,
+          "overturned": 10
+        },
+        "2015": {
+          "total": 29,
+          "overturned": 14
+        },
+        "2016": {
+          "total": 38,
+          "overturned": 19
+        },
+        "2017": {
+          "total": 31,
+          "overturned": 20
+        },
+        "2018": {
+          "total": 40,
+          "overturned": 20
+        },
+        "2019": {
+          "total": 52,
+          "overturned": 36
+        },
+        "2020": {
+          "total": 46,
+          "overturned": 20
+        },
+        "2021": {
+          "total": 36,
+          "overturned": 20
+        },
+        "2022": {
+          "total": 19,
+          "overturned": 8
+        },
+        "2023": {
+          "total": 23,
+          "overturned": 14
+        },
+        "2024": {
+          "total": 14,
+          "overturned": 6
+        },
+        "2025": {
+          "total": 20,
+          "overturned": 12
+        }
+      },
+      "overturn_rate": 0.4768
+    },
+    {
+      "category": "Emergency/Urg Care",
+      "total": 620,
+      "upheld": 344,
+      "overturned": 276,
+      "years": {
+        "2002": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2005": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2006": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2007": {
+          "total": 2,
+          "overturned": 2
+        },
+        "2008": {
+          "total": 124,
+          "overturned": 70
+        },
+        "2009": {
+          "total": 63,
+          "overturned": 10
+        },
+        "2010": {
+          "total": 64,
+          "overturned": 12
+        },
+        "2011": {
+          "total": 36,
+          "overturned": 16
+        },
+        "2012": {
+          "total": 32,
+          "overturned": 17
+        },
+        "2013": {
+          "total": 38,
+          "overturned": 19
+        },
+        "2014": {
+          "total": 32,
+          "overturned": 9
+        },
+        "2015": {
+          "total": 49,
+          "overturned": 23
+        },
+        "2016": {
+          "total": 53,
+          "overturned": 25
+        },
+        "2017": {
+          "total": 59,
+          "overturned": 34
+        },
+        "2018": {
+          "total": 27,
+          "overturned": 9
+        },
+        "2019": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2020": {
+          "total": 2,
+          "overturned": 2
+        },
+        "2021": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2022": {
+          "total": 6,
+          "overturned": 6
+        },
+        "2023": {
+          "total": 3,
+          "overturned": 2
+        },
+        "2024": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2025": {
+          "total": 9,
+          "overturned": 9
+        }
+      },
+      "overturn_rate": 0.4452
+    },
+    {
+      "category": "Rehab/Svcs SNF Inpt",
+      "total": 521,
+      "upheld": 393,
+      "overturned": 128,
+      "years": {
+        "2001": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2002": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2003": {
+          "total": 7,
+          "overturned": 4
+        },
+        "2004": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2005": {
+          "total": 11,
+          "overturned": 2
+        },
+        "2006": {
+          "total": 13,
+          "overturned": 4
+        },
+        "2007": {
+          "total": 16,
+          "overturned": 4
+        },
+        "2008": {
+          "total": 35,
+          "overturned": 14
+        },
+        "2009": {
+          "total": 20,
+          "overturned": 6
+        },
+        "2010": {
+          "total": 16,
+          "overturned": 5
+        },
+        "2011": {
+          "total": 18,
+          "overturned": 2
+        },
+        "2012": {
+          "total": 20,
+          "overturned": 3
+        },
+        "2013": {
+          "total": 18,
+          "overturned": 6
+        },
+        "2014": {
+          "total": 19,
+          "overturned": 8
+        },
+        "2015": {
+          "total": 25,
+          "overturned": 4
+        },
+        "2016": {
+          "total": 36,
+          "overturned": 6
+        },
+        "2017": {
+          "total": 37,
+          "overturned": 8
+        },
+        "2018": {
+          "total": 24,
+          "overturned": 5
+        },
+        "2019": {
+          "total": 37,
+          "overturned": 8
+        },
+        "2020": {
+          "total": 20,
+          "overturned": 1
+        },
+        "2021": {
+          "total": 16,
+          "overturned": 3
+        },
+        "2022": {
+          "total": 32,
+          "overturned": 9
+        },
+        "2023": {
+          "total": 37,
+          "overturned": 7
+        },
+        "2024": {
+          "total": 27,
+          "overturned": 7
+        },
+        "2025": {
+          "total": 23,
+          "overturned": 6
+        }
+      },
+      "overturn_rate": 0.2457
+    },
+    {
+      "category": "Cardio-Vasc Proc",
+      "total": 505,
+      "upheld": 242,
+      "overturned": 263,
+      "years": {
+        "2002": {
+          "total": 6,
+          "overturned": 1
+        },
+        "2003": {
+          "total": 14,
+          "overturned": 4
+        },
+        "2004": {
+          "total": 11,
+          "overturned": 3
+        },
+        "2005": {
+          "total": 13,
+          "overturned": 0
+        },
+        "2006": {
+          "total": 17,
+          "overturned": 3
+        },
+        "2007": {
+          "total": 17,
+          "overturned": 5
+        },
+        "2008": {
+          "total": 15,
+          "overturned": 10
+        },
+        "2009": {
+          "total": 15,
+          "overturned": 8
+        },
+        "2010": {
+          "total": 18,
+          "overturned": 6
+        },
+        "2011": {
+          "total": 9,
+          "overturned": 4
+        },
+        "2012": {
+          "total": 6,
+          "overturned": 5
+        },
+        "2013": {
+          "total": 13,
+          "overturned": 8
+        },
+        "2014": {
+          "total": 20,
+          "overturned": 13
+        },
+        "2015": {
+          "total": 18,
+          "overturned": 8
+        },
+        "2016": {
+          "total": 24,
+          "overturned": 14
+        },
+        "2017": {
+          "total": 41,
+          "overturned": 17
+        },
+        "2018": {
+          "total": 32,
+          "overturned": 16
+        },
+        "2019": {
+          "total": 32,
+          "overturned": 25
+        },
+        "2020": {
+          "total": 28,
+          "overturned": 17
+        },
+        "2021": {
+          "total": 37,
+          "overturned": 26
+        },
+        "2022": {
+          "total": 26,
+          "overturned": 16
+        },
+        "2023": {
+          "total": 38,
+          "overturned": 23
+        },
+        "2024": {
+          "total": 26,
+          "overturned": 16
+        },
+        "2025": {
+          "total": 29,
+          "overturned": 15
+        }
+      },
+      "overturn_rate": 0.5208
+    },
+    {
+      "category": "Special Proc",
+      "total": 499,
+      "upheld": 324,
+      "overturned": 175,
+      "years": {
+        "2002": {
+          "total": 26,
+          "overturned": 12
+        },
+        "2003": {
+          "total": 9,
+          "overturned": 1
+        },
+        "2004": {
+          "total": 12,
+          "overturned": 3
+        },
+        "2005": {
+          "total": 23,
+          "overturned": 7
+        },
+        "2006": {
+          "total": 14,
+          "overturned": 5
+        },
+        "2007": {
+          "total": 11,
+          "overturned": 5
+        },
+        "2008": {
+          "total": 12,
+          "overturned": 9
+        },
+        "2009": {
+          "total": 11,
+          "overturned": 4
+        },
+        "2010": {
+          "total": 9,
+          "overturned": 6
+        },
+        "2011": {
+          "total": 21,
+          "overturned": 3
+        },
+        "2012": {
+          "total": 8,
+          "overturned": 3
+        },
+        "2013": {
+          "total": 17,
+          "overturned": 8
+        },
+        "2014": {
+          "total": 23,
+          "overturned": 7
+        },
+        "2015": {
+          "total": 24,
+          "overturned": 5
+        },
+        "2016": {
+          "total": 35,
+          "overturned": 8
+        },
+        "2017": {
+          "total": 38,
+          "overturned": 14
+        },
+        "2018": {
+          "total": 29,
+          "overturned": 8
+        },
+        "2019": {
+          "total": 23,
+          "overturned": 5
+        },
+        "2020": {
+          "total": 32,
+          "overturned": 11
+        },
+        "2021": {
+          "total": 25,
+          "overturned": 9
+        },
+        "2022": {
+          "total": 39,
+          "overturned": 11
+        },
+        "2023": {
+          "total": 27,
+          "overturned": 16
+        },
+        "2024": {
+          "total": 22,
+          "overturned": 10
+        },
+        "2025": {
+          "total": 9,
+          "overturned": 5
+        }
+      },
+      "overturn_rate": 0.3507
+    },
+    {
+      "category": "Ear-Nose-Thro Proc",
+      "total": 490,
+      "upheld": 238,
+      "overturned": 252,
+      "years": {
+        "2001": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2002": {
+          "total": 11,
+          "overturned": 4
+        },
+        "2003": {
+          "total": 4,
+          "overturned": 3
+        },
+        "2004": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2005": {
+          "total": 4,
+          "overturned": 2
+        },
+        "2006": {
+          "total": 10,
+          "overturned": 6
+        },
+        "2007": {
+          "total": 15,
+          "overturned": 4
+        },
+        "2008": {
+          "total": 6,
+          "overturned": 0
+        },
+        "2009": {
+          "total": 18,
+          "overturned": 4
+        },
+        "2010": {
+          "total": 11,
+          "overturned": 2
+        },
+        "2011": {
+          "total": 8,
+          "overturned": 1
+        },
+        "2012": {
+          "total": 14,
+          "overturned": 7
+        },
+        "2013": {
+          "total": 25,
+          "overturned": 6
+        },
+        "2014": {
+          "total": 18,
+          "overturned": 3
+        },
+        "2015": {
+          "total": 12,
+          "overturned": 4
+        },
+        "2016": {
+          "total": 16,
+          "overturned": 4
+        },
+        "2017": {
+          "total": 34,
+          "overturned": 8
+        },
+        "2018": {
+          "total": 39,
+          "overturned": 14
+        },
+        "2019": {
+          "total": 24,
+          "overturned": 12
+        },
+        "2020": {
+          "total": 23,
+          "overturned": 18
+        },
+        "2021": {
+          "total": 20,
+          "overturned": 14
+        },
+        "2022": {
+          "total": 20,
+          "overturned": 10
+        },
+        "2023": {
+          "total": 23,
+          "overturned": 15
+        },
+        "2024": {
+          "total": 52,
+          "overturned": 44
+        },
+        "2025": {
+          "total": 75,
+          "overturned": 62
+        },
+        "2026": {
+          "total": 1,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.5143
+    },
+    {
+      "category": "Alternative Tx",
+      "total": 414,
+      "upheld": 275,
+      "overturned": 139,
+      "years": {
+        "2002": {
+          "total": 10,
+          "overturned": 2
+        },
+        "2003": {
+          "total": 18,
+          "overturned": 4
+        },
+        "2004": {
+          "total": 18,
+          "overturned": 7
+        },
+        "2005": {
+          "total": 21,
+          "overturned": 8
+        },
+        "2006": {
+          "total": 29,
+          "overturned": 6
+        },
+        "2007": {
+          "total": 27,
+          "overturned": 5
+        },
+        "2008": {
+          "total": 25,
+          "overturned": 8
+        },
+        "2009": {
+          "total": 11,
+          "overturned": 3
+        },
+        "2010": {
+          "total": 24,
+          "overturned": 7
+        },
+        "2011": {
+          "total": 15,
+          "overturned": 5
+        },
+        "2012": {
+          "total": 8,
+          "overturned": 1
+        },
+        "2013": {
+          "total": 11,
+          "overturned": 2
+        },
+        "2014": {
+          "total": 9,
+          "overturned": 3
+        },
+        "2015": {
+          "total": 13,
+          "overturned": 8
+        },
+        "2016": {
+          "total": 12,
+          "overturned": 5
+        },
+        "2017": {
+          "total": 33,
+          "overturned": 14
+        },
+        "2018": {
+          "total": 35,
+          "overturned": 19
+        },
+        "2019": {
+          "total": 24,
+          "overturned": 10
+        },
+        "2020": {
+          "total": 24,
+          "overturned": 8
+        },
+        "2021": {
+          "total": 13,
+          "overturned": 6
+        },
+        "2022": {
+          "total": 14,
+          "overturned": 6
+        },
+        "2023": {
+          "total": 7,
+          "overturned": 0
+        },
+        "2024": {
+          "total": 10,
+          "overturned": 1
+        },
+        "2025": {
+          "total": 3,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.3357
+    },
+    {
+      "category": "Acute Med Svc Inpt",
+      "total": 341,
+      "upheld": 174,
+      "overturned": 167,
+      "years": {
+        "2002": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2003": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2005": {
+          "total": 10,
+          "overturned": 5
+        },
+        "2006": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2007": {
+          "total": 13,
+          "overturned": 7
+        },
+        "2008": {
+          "total": 13,
+          "overturned": 5
+        },
+        "2009": {
+          "total": 13,
+          "overturned": 7
+        },
+        "2010": {
+          "total": 4,
+          "overturned": 1
+        },
+        "2011": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2012": {
+          "total": 11,
+          "overturned": 4
+        },
+        "2013": {
+          "total": 10,
+          "overturned": 2
+        },
+        "2014": {
+          "total": 12,
+          "overturned": 5
+        },
+        "2015": {
+          "total": 20,
+          "overturned": 10
+        },
+        "2016": {
+          "total": 20,
+          "overturned": 9
+        },
+        "2017": {
+          "total": 17,
+          "overturned": 3
+        },
+        "2018": {
+          "total": 27,
+          "overturned": 16
+        },
+        "2019": {
+          "total": 14,
+          "overturned": 6
+        },
+        "2020": {
+          "total": 19,
+          "overturned": 5
+        },
+        "2021": {
+          "total": 32,
+          "overturned": 15
+        },
+        "2022": {
+          "total": 18,
+          "overturned": 12
+        },
+        "2023": {
+          "total": 26,
+          "overturned": 18
+        },
+        "2024": {
+          "total": 28,
+          "overturned": 18
+        },
+        "2025": {
+          "total": 20,
+          "overturned": 14
+        },
+        "2026": {
+          "total": 1,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0.4897
+    },
+    {
+      "category": "Ob-Gyn Proc",
+      "total": 292,
+      "upheld": 164,
+      "overturned": 128,
+      "years": {
+        "2001": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2002": {
+          "total": 10,
+          "overturned": 3
+        },
+        "2003": {
+          "total": 14,
+          "overturned": 3
+        },
+        "2004": {
+          "total": 5,
+          "overturned": 2
+        },
+        "2005": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2006": {
+          "total": 11,
+          "overturned": 5
+        },
+        "2007": {
+          "total": 8,
+          "overturned": 4
+        },
+        "2008": {
+          "total": 7,
+          "overturned": 5
+        },
+        "2009": {
+          "total": 11,
+          "overturned": 5
+        },
+        "2010": {
+          "total": 13,
+          "overturned": 6
+        },
+        "2011": {
+          "total": 12,
+          "overturned": 5
+        },
+        "2012": {
+          "total": 7,
+          "overturned": 2
+        },
+        "2013": {
+          "total": 11,
+          "overturned": 5
+        },
+        "2014": {
+          "total": 10,
+          "overturned": 2
+        },
+        "2015": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2016": {
+          "total": 13,
+          "overturned": 5
+        },
+        "2017": {
+          "total": 29,
+          "overturned": 12
+        },
+        "2018": {
+          "total": 18,
+          "overturned": 4
+        },
+        "2019": {
+          "total": 19,
+          "overturned": 11
+        },
+        "2020": {
+          "total": 21,
+          "overturned": 13
+        },
+        "2021": {
+          "total": 14,
+          "overturned": 4
+        },
+        "2022": {
+          "total": 10,
+          "overturned": 5
+        },
+        "2023": {
+          "total": 10,
+          "overturned": 4
+        },
+        "2024": {
+          "total": 12,
+          "overturned": 8
+        },
+        "2025": {
+          "total": 14,
+          "overturned": 9
+        }
+      },
+      "overturn_rate": 0.4384
+    },
+    {
+      "category": "Neurosurgery Proc",
+      "total": 171,
+      "upheld": 83,
+      "overturned": 88,
+      "years": {
+        "2002": {
+          "total": 8,
+          "overturned": 3
+        },
+        "2003": {
+          "total": 10,
+          "overturned": 1
+        },
+        "2004": {
+          "total": 9,
+          "overturned": 2
+        },
+        "2005": {
+          "total": 8,
+          "overturned": 0
+        },
+        "2006": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2007": {
+          "total": 4,
+          "overturned": 1
+        },
+        "2008": {
+          "total": 5,
+          "overturned": 4
+        },
+        "2009": {
+          "total": 3,
+          "overturned": 2
+        },
+        "2010": {
+          "total": 8,
+          "overturned": 2
+        },
+        "2011": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2012": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2013": {
+          "total": 7,
+          "overturned": 0
+        },
+        "2014": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2015": {
+          "total": 9,
+          "overturned": 1
+        },
+        "2016": {
+          "total": 8,
+          "overturned": 3
+        },
+        "2017": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2018": {
+          "total": 8,
+          "overturned": 6
+        },
+        "2019": {
+          "total": 10,
+          "overturned": 6
+        },
+        "2020": {
+          "total": 4,
+          "overturned": 4
+        },
+        "2021": {
+          "total": 11,
+          "overturned": 11
+        },
+        "2022": {
+          "total": 5,
+          "overturned": 5
+        },
+        "2023": {
+          "total": 6,
+          "overturned": 6
+        },
+        "2024": {
+          "total": 10,
+          "overturned": 8
+        },
+        "2025": {
+          "total": 18,
+          "overturned": 13
+        }
+      },
+      "overturn_rate": 0.5146
+    },
+    {
+      "category": "Dent/Orthodont Proc",
+      "total": 168,
+      "upheld": 75,
+      "overturned": 93,
+      "years": {
+        "2002": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2003": {
+          "total": 3,
+          "overturned": 2
+        },
+        "2004": {
+          "total": 2,
+          "overturned": 2
+        },
+        "2005": {
+          "total": 11,
+          "overturned": 4
+        },
+        "2006": {
+          "total": 7,
+          "overturned": 4
+        },
+        "2007": {
+          "total": 3,
+          "overturned": 3
+        },
+        "2008": {
+          "total": 4,
+          "overturned": 4
+        },
+        "2009": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2010": {
+          "total": 9,
+          "overturned": 2
+        },
+        "2011": {
+          "total": 2,
+          "overturned": 2
+        },
+        "2012": {
+          "total": 5,
+          "overturned": 4
+        },
+        "2013": {
+          "total": 5,
+          "overturned": 1
+        },
+        "2014": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2015": {
+          "total": 8,
+          "overturned": 4
+        },
+        "2016": {
+          "total": 19,
+          "overturned": 11
+        },
+        "2017": {
+          "total": 27,
+          "overturned": 16
+        },
+        "2018": {
+          "total": 9,
+          "overturned": 4
+        },
+        "2019": {
+          "total": 12,
+          "overturned": 6
+        },
+        "2020": {
+          "total": 7,
+          "overturned": 4
+        },
+        "2021": {
+          "total": 8,
+          "overturned": 4
+        },
+        "2022": {
+          "total": 4,
+          "overturned": 2
+        },
+        "2023": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2024": {
+          "total": 7,
+          "overturned": 5
+        },
+        "2025": {
+          "total": 1,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.5536
+    },
+    {
+      "category": "Chiropractic Care",
+      "total": 158,
+      "upheld": 108,
+      "overturned": 50,
+      "years": {
+        "2001": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2002": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2003": {
+          "total": 7,
+          "overturned": 4
+        },
+        "2004": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2005": {
+          "total": 8,
+          "overturned": 3
+        },
+        "2006": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2007": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2008": {
+          "total": 5,
+          "overturned": 1
+        },
+        "2009": {
+          "total": 12,
+          "overturned": 2
+        },
+        "2010": {
+          "total": 9,
+          "overturned": 2
+        },
+        "2011": {
+          "total": 8,
+          "overturned": 2
+        },
+        "2012": {
+          "total": 9,
+          "overturned": 2
+        },
+        "2013": {
+          "total": 8,
+          "overturned": 1
+        },
+        "2014": {
+          "total": 6,
+          "overturned": 1
+        },
+        "2015": {
+          "total": 9,
+          "overturned": 3
+        },
+        "2016": {
+          "total": 4,
+          "overturned": 0
+        },
+        "2017": {
+          "total": 11,
+          "overturned": 1
+        },
+        "2018": {
+          "total": 11,
+          "overturned": 4
+        },
+        "2019": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2020": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2021": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2022": {
+          "total": 3,
+          "overturned": 2
+        },
+        "2023": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2024": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2025": {
+          "total": 2,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.3165
+    },
+    {
+      "category": "Home Health Care",
+      "total": 153,
+      "upheld": 81,
+      "overturned": 72,
+      "years": {
+        "2002": {
+          "total": 8,
+          "overturned": 3
+        },
+        "2003": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2005": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2006": {
+          "total": 4,
+          "overturned": 3
+        },
+        "2007": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2008": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2009": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2010": {
+          "total": 4,
+          "overturned": 0
+        },
+        "2011": {
+          "total": 5,
+          "overturned": 5
+        },
+        "2012": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2013": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2014": {
+          "total": 4,
+          "overturned": 1
+        },
+        "2015": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2016": {
+          "total": 16,
+          "overturned": 9
+        },
+        "2017": {
+          "total": 10,
+          "overturned": 5
+        },
+        "2018": {
+          "total": 4,
+          "overturned": 4
+        },
+        "2019": {
+          "total": 21,
+          "overturned": 11
+        },
+        "2020": {
+          "total": 14,
+          "overturned": 5
+        },
+        "2021": {
+          "total": 8,
+          "overturned": 2
+        },
+        "2022": {
+          "total": 9,
+          "overturned": 4
+        },
+        "2023": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2024": {
+          "total": 12,
+          "overturned": 6
+        },
+        "2025": {
+          "total": 7,
+          "overturned": 2
+        }
+      },
+      "overturn_rate": 0.4706
+    },
+    {
+      "category": "Vision Services",
+      "total": 113,
+      "upheld": 65,
+      "overturned": 48,
+      "years": {
+        "2002": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2003": {
+          "total": 6,
+          "overturned": 0
+        },
+        "2004": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2005": {
+          "total": 4,
+          "overturned": 2
+        },
+        "2006": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2007": {
+          "total": 6,
+          "overturned": 4
+        },
+        "2008": {
+          "total": 7,
+          "overturned": 2
+        },
+        "2009": {
+          "total": 9,
+          "overturned": 4
+        },
+        "2010": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2011": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2012": {
+          "total": 7,
+          "overturned": 0
+        },
+        "2013": {
+          "total": 5,
+          "overturned": 2
+        },
+        "2014": {
+          "total": 10,
+          "overturned": 2
+        },
+        "2015": {
+          "total": 7,
+          "overturned": 5
+        },
+        "2016": {
+          "total": 7,
+          "overturned": 3
+        },
+        "2017": {
+          "total": 11,
+          "overturned": 6
+        },
+        "2018": {
+          "total": 14,
+          "overturned": 9
+        },
+        "2019": {
+          "total": 3,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.4248
+    },
+    {
+      "category": "Urology Proc",
+      "total": 105,
+      "upheld": 62,
+      "overturned": 43,
+      "years": {
+        "2002": {
+          "total": 4,
+          "overturned": 2
+        },
+        "2003": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2005": {
+          "total": 3,
+          "overturned": 0
+        },
+        "2006": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2007": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2008": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2009": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2010": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2011": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2012": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2013": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2014": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2015": {
+          "total": 8,
+          "overturned": 1
+        },
+        "2016": {
+          "total": 9,
+          "overturned": 2
+        },
+        "2017": {
+          "total": 22,
+          "overturned": 11
+        },
+        "2018": {
+          "total": 9,
+          "overturned": 4
+        },
+        "2019": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2020": {
+          "total": 12,
+          "overturned": 6
+        },
+        "2021": {
+          "total": 3,
+          "overturned": 3
+        },
+        "2022": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2023": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2024": {
+          "total": 4,
+          "overturned": 3
+        }
+      },
+      "overturn_rate": 0.4095
+    },
+    {
+      "category": "Surgery",
+      "total": 83,
+      "upheld": 33,
+      "overturned": 50,
+      "years": {
+        "2026": {
+          "total": 83,
+          "overturned": 50
+        }
+      },
+      "overturn_rate": 0.6024
+    },
+    {
+      "category": "Transportation",
+      "total": 65,
+      "upheld": 30,
+      "overturned": 35,
+      "years": {
+        "2017": {
+          "total": 6,
+          "overturned": 4
+        },
+        "2018": {
+          "total": 11,
+          "overturned": 4
+        },
+        "2019": {
+          "total": 9,
+          "overturned": 5
+        },
+        "2020": {
+          "total": 12,
+          "overturned": 6
+        },
+        "2021": {
+          "total": 9,
+          "overturned": 5
+        },
+        "2022": {
+          "total": 2,
+          "overturned": 2
+        },
+        "2023": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2024": {
+          "total": 9,
+          "overturned": 5
+        },
+        "2025": {
+          "total": 4,
+          "overturned": 3
+        }
+      },
+      "overturn_rate": 0.5385
+    },
+    {
+      "category": "Ophthalmology Proc",
+      "total": 65,
+      "upheld": 38,
+      "overturned": 27,
+      "years": {
+        "2002": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2003": {
+          "total": 2,
+          "overturned": 2
+        },
+        "2004": {
+          "total": 3,
+          "overturned": 0
+        },
+        "2005": {
+          "total": 5,
+          "overturned": 0
+        },
+        "2006": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2008": {
+          "total": 2,
+          "overturned": 2
+        },
+        "2009": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2010": {
+          "total": 4,
+          "overturned": 2
+        },
+        "2011": {
+          "total": 8,
+          "overturned": 4
+        },
+        "2012": {
+          "total": 3,
+          "overturned": 0
+        },
+        "2013": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2014": {
+          "total": 8,
+          "overturned": 5
+        },
+        "2015": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2016": {
+          "total": 9,
+          "overturned": 3
+        },
+        "2017": {
+          "total": 6,
+          "overturned": 5
+        },
+        "2018": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2019": {
+          "total": 1,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.4154
+    },
+    {
+      "category": "Vision Services/Ophthalmology",
+      "total": 50,
+      "upheld": 22,
+      "overturned": 28,
+      "years": {
+        "2019": {
+          "total": 16,
+          "overturned": 12
+        },
+        "2020": {
+          "total": 10,
+          "overturned": 5
+        },
+        "2021": {
+          "total": 5,
+          "overturned": 5
+        },
+        "2022": {
+          "total": 3,
+          "overturned": 2
+        },
+        "2023": {
+          "total": 6,
+          "overturned": 1
+        },
+        "2024": {
+          "total": 4,
+          "overturned": 0
+        },
+        "2025": {
+          "total": 6,
+          "overturned": 3
+        }
+      },
+      "overturn_rate": 0.56
+    },
+    {
+      "category": "Prev Health Screen",
+      "total": 44,
+      "upheld": 32,
+      "overturned": 12,
+      "years": {
+        "2002": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2003": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2004": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2005": {
+          "total": 2,
+          "overturned": 2
+        },
+        "2006": {
+          "total": 3,
+          "overturned": 0
+        },
+        "2007": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2008": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2009": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2010": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2011": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2012": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2015": {
+          "total": 5,
+          "overturned": 3
+        },
+        "2016": {
+          "total": 4,
+          "overturned": 0
+        },
+        "2017": {
+          "total": 4,
+          "overturned": 0
+        },
+        "2018": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2020": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2021": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2022": {
+          "total": 3,
+          "overturned": 0
+        },
+        "2024": {
+          "total": 3,
+          "overturned": 1
+        },
+        "2025": {
+          "total": 2,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.2727
+    },
+    {
+      "category": "Drug Ad Oth Oral",
+      "total": 42,
+      "upheld": 4,
+      "overturned": 38,
+      "years": {
+        "2026": {
+          "total": 42,
+          "overturned": 38
+        }
+      },
+      "overturn_rate": 0.9048
+    },
+    {
+      "category": "Medicine Serv Proc",
+      "total": 34,
+      "upheld": 16,
+      "overturned": 18,
+      "years": {
+        "2026": {
+          "total": 34,
+          "overturned": 18
+        }
+      },
+      "overturn_rate": 0.5294
+    },
+    {
+      "category": "Not Applicable",
+      "total": 31,
+      "upheld": 17,
+      "overturned": 14,
+      "years": {
+        "2009": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2010": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2011": {
+          "total": 2,
+          "overturned": 2
+        },
+        "2012": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2013": {
+          "total": 2,
+          "overturned": 1
+        },
+        "2014": {
+          "total": 2,
+          "overturned": 0
+        },
+        "2015": {
+          "total": 1,
+          "overturned": 1
+        },
+        "2016": {
+          "total": 6,
+          "overturned": 3
+        },
+        "2017": {
+          "total": 8,
+          "overturned": 2
+        }
+      },
+      "overturn_rate": 0.4516
+    },
+    {
+      "category": "Radio Proc",
+      "total": 29,
+      "upheld": 14,
+      "overturned": 15,
+      "years": {
+        "2026": {
+          "total": 29,
+          "overturned": 15
+        }
+      },
+      "overturn_rate": 0.5172
+    },
+    {
+      "category": "Alcohol Drug Tmt",
+      "total": 20,
+      "upheld": 2,
+      "overturned": 18,
+      "years": {
+        "2026": {
+          "total": 20,
+          "overturned": 18
+        }
+      },
+      "overturn_rate": 0.9
+    },
+    {
+      "category": "Durable Med Equip",
+      "total": 18,
+      "upheld": 5,
+      "overturned": 13,
+      "years": {
+        "2026": {
+          "total": 18,
+          "overturned": 13
+        }
+      },
+      "overturn_rate": 0.7222
+    },
+    {
+      "category": "Eval and Mgmt",
+      "total": 13,
+      "upheld": 8,
+      "overturned": 5,
+      "years": {
+        "2026": {
+          "total": 13,
+          "overturned": 5
+        }
+      },
+      "overturn_rate": 0.3846
+    },
+    {
+      "category": "DME MACs",
+      "total": 6,
+      "upheld": 3,
+      "overturned": 3,
+      "years": {
+        "2026": {
+          "total": 6,
+          "overturned": 3
+        }
+      },
+      "overturn_rate": 0.5
+    },
+    {
+      "category": "Path Lab Proc",
+      "total": 6,
+      "upheld": 5,
+      "overturned": 1,
+      "years": {
+        "2026": {
+          "total": 6,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.1667
+    },
+    {
+      "category": "Temp Codes",
+      "total": 6,
+      "upheld": 0,
+      "overturned": 6,
+      "years": {
+        "2026": {
+          "total": 6,
+          "overturned": 6
+        }
+      },
+      "overturn_rate": 1
+    },
+    {
+      "category": "Admin Misc  Invest",
+      "total": 3,
+      "upheld": 1,
+      "overturned": 2,
+      "years": {
+        "2026": {
+          "total": 3,
+          "overturned": 2
+        }
+      },
+      "overturn_rate": 0.6667
+    },
+    {
+      "category": "MLTSS",
+      "total": 3,
+      "upheld": 2,
+      "overturned": 1,
+      "years": {
+        "2014": {
+          "total": 1,
+          "overturned": 0
+        },
+        "2018": {
+          "total": 2,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.3333
+    },
+    {
+      "category": "Category III Codes",
+      "total": 2,
+      "upheld": 2,
+      "overturned": 0,
+      "years": {
+        "2026": {
+          "total": 2,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0
+    },
+    {
+      "category": "Proc/Profess Serv",
+      "total": 2,
+      "upheld": 1,
+      "overturned": 1,
+      "years": {
+        "2026": {
+          "total": 2,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.5
+    },
+    {
+      "category": "Med Surg Supplies",
+      "total": 2,
+      "upheld": 1,
+      "overturned": 1,
+      "years": {
+        "2026": {
+          "total": 2,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.5
+    },
+    {
+      "category": "National Temp Codes",
+      "total": 2,
+      "upheld": 2,
+      "overturned": 0,
+      "years": {
+        "2026": {
+          "total": 2,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0
+    },
+    {
+      "category": "Gen Surg proc",
+      "total": 2,
+      "upheld": 1,
+      "overturned": 1,
+      "years": {
+        "2002": {
+          "total": 2,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 0.5
+    },
+    {
+      "category": "Outpatient PPS",
+      "total": 1,
+      "upheld": 0,
+      "overturned": 1,
+      "years": {
+        "2026": {
+          "total": 1,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 1
+    },
+    {
+      "category": "Ambulance Transport",
+      "total": 1,
+      "upheld": 0,
+      "overturned": 1,
+      "years": {
+        "2026": {
+          "total": 1,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 1
+    },
+    {
+      "category": "Prop Lab Analyses",
+      "total": 1,
+      "upheld": 1,
+      "overturned": 0,
+      "years": {
+        "2026": {
+          "total": 1,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0
+    },
+    {
+      "category": "Other Thera Proc",
+      "total": 1,
+      "upheld": 0,
+      "overturned": 1,
+      "years": {
+        "2026": {
+          "total": 1,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 1
+    },
+    {
+      "category": "Chemo Drugs",
+      "total": 1,
+      "upheld": 1,
+      "overturned": 0,
+      "years": {
+        "2026": {
+          "total": 1,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0
+    },
+    {
+      "category": "Est National Codes",
+      "total": 1,
+      "upheld": 1,
+      "overturned": 0,
+      "years": {
+        "2026": {
+          "total": 1,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0
+    },
+    {
+      "category": "Path Lab Serv",
+      "total": 1,
+      "upheld": 0,
+      "overturned": 1,
+      "years": {
+        "2026": {
+          "total": 1,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 1
+    },
+    {
+      "category": "Ortho Proc Serv",
+      "total": 1,
+      "upheld": 1,
+      "overturned": 0,
+      "years": {
+        "2026": {
+          "total": 1,
+          "overturned": 0
+        }
+      },
+      "overturn_rate": 0
+    },
+    {
+      "category": "Prosthetic Proc",
+      "total": 1,
+      "upheld": 0,
+      "overturned": 1,
+      "years": {
+        "2026": {
+          "total": 1,
+          "overturned": 1
+        }
+      },
+      "overturn_rate": 1
+    }
+  ],
+  "sha256": "f68951823f6ffc09566cc190d97b2808e0269a069843efe809a3f5f90d4c893b",
+  "fetched_at": "2026-08-04T00:44:38.095Z"
+}

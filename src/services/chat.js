@@ -4,12 +4,22 @@
 // The chat also serves as the graph console: it answers payer questions with
 // no active visit, and raw read-only Cypher pasted into it runs directly.
 import { whatIf } from '../core/decide.js';
-import { payerName, PAYER_IDS } from '../domain/payers.js';
+import { payerName, PAYER_IDS, PROCEDURES } from '../domain/payers.js';
 
 const NUM_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8 };
 const CYPHER_START = /^(MATCH|OPTIONAL\s+MATCH|RETURN|WITH|UNWIND)\b/i;
 
-export function createChat({ llm, consults, graph, graphQuery }) {
+// Real California insurers the PA graph can answer for. Matching is by name;
+// resolution is deterministic and cited — the LLM never touches these answers.
+const REAL_PAYERS = [
+  [/blue\s*shield/i, 'blueshield_ca'],
+  [/anthem/i, 'anthem_ca'],
+  [/health\s*net/i, 'healthnet_ca'],
+  [/united\s*health|uhc\b/i, 'uhc_ca'],
+  [/kaiser/i, 'kaiser_ca'],
+];
+
+export function createChat({ llm, consults, graph, graphQuery, pa }) {
   function payerFromText(text) {
     const t = text.toLowerCase();
     for (const pid of PAYER_IDS) {
@@ -55,6 +65,20 @@ export function createChat({ llm, consults, graph, graphQuery }) {
         ...shown.map((row) => `  ${row.map((v) => v ?? '–').join(' · ')}`),
         out.rows.length > shown.length ? `  …and ${out.rows.length - shown.length} more rows.` : '',
       ].filter(Boolean).join('\n');
+    }
+
+    // Real-payer questions resolve against the California PA graph, verbatim.
+    if (pa) {
+      const real = REAL_PAYERS.find(([re]) => re.test(q));
+      const codeM = q.toUpperCase().match(/\b(\d{5}|\d{4}[A-Z]|[A-Z]\d{4})\b/);
+      const study = Object.values(PROCEDURES).find((p) =>
+        q.toLowerCase().includes(p.short.toLowerCase()) || q.toLowerCase().includes(p.label.toLowerCase()));
+      if (real && (codeM || study)) {
+        const code = codeM ? codeM[1] : study.cpt;
+        const lob = /medi-?cal/i.test(q) ? 'medi-cal' : /medicare|advantage/i.test(q) ? 'medicare_advantage' : 'commercial';
+        const r = pa.resolve({ payer: real[1], lob, code, asOf: new Date().toISOString().slice(0, 10) });
+        return formatPaResolution(r, pa);
+      }
     }
 
     const ctx = await consults.currentPredictionFor(caseId);
@@ -128,12 +152,37 @@ export function createChat({ llm, consults, graph, graphQuery }) {
     return 'I can answer about this case\'s prediction, what\'s missing, the learned payer rulebook, denial precedents, and what-ifs ("what if we wait 2 weeks?"). I also take read-only Cypher directly. Everything I say is computed from the graph — I don\'t improvise.';
   }
 
+  function formatPaResolution(r, paSvc) {
+    const lines = [];
+    const study = PROCEDURES[r.code] ? ` (${PROCEDURES[r.code].label})` : '';
+    if (r.requirement_type === 'prior_auth') {
+      lines.push(`${r.payer_name}, ${r.lob}: prior authorization IS required for ${r.code}${study}.`);
+      lines.push(`Listed under: ${r.policies.join('; ')}.`);
+    } else if (r.requirement_type === 'prior_auth_delegated') {
+      lines.push(`${r.payer_name}, ${r.lob}: prior authorization IS required for ${r.code}${study}, managed by the delegate ${r.delegate}.`);
+      const imr = paSvc.imrCategory('Diag Imag & Screen');
+      if (imr) lines.push(`Context from state data: California IMR overturns ${Math.round(imr.overturn_rate * 100)}% of appealed imaging denials (${imr.total} cases since 2001, all plans).`);
+    } else if (r.requirement_type === 'no_prior_auth_listed') {
+      lines.push(`${r.payer_name}, ${r.lob}: no prior authorization is listed for ${r.code}${study} on the list in force.`);
+    } else {
+      lines.push(`I can't answer that yet: ${r.detail}`);
+      return lines.join('\n');
+    }
+    lines.push(`Source: ${r.source.document.title}, effective ${r.source.effective_from}, snapshot ${r.source.sha256.slice(0, 12)}.`);
+    lines.push(...r.derivation.map((d) => `  · ${d.detail}`));
+    return lines.join('\n');
+  }
+
   return {
     async ask(caseId, text) {
       consults.chatPush(caseId, { role: 'user', text });
       const grounded = await answer(caseId, text);
-      // Cypher results are verbatim data; never let the LLM rephrase them.
-      const final = CYPHER_START.test(text.trim()) ? grounded : await llm.prose({
+      // Cypher results and real-payer PA resolutions are verbatim data; the
+      // LLM never rephrases them.
+      const isRealPa = pa && REAL_PAYERS.some(([re]) => re.test(text))
+        && (/\b(\d{5}|\d{4}[A-Z]|[A-Z]\d{4})\b/i.test(text)
+          || Object.values(PROCEDURES).some((p) => text.toLowerCase().includes(p.short.toLowerCase())));
+      const final = (CYPHER_START.test(text.trim()) || isRealPa) ? grounded : await llm.prose({
         purpose: 'chat', caseId,
         system: 'You are the chat surface of a prior-auth copilot. Rephrase the grounded answer conversationally for a clinician. You may ONLY use the facts, numbers, and lines provided — never add clinical or payer claims. Keep any bullet lines intact.',
         prompt: `Doctor asked: "${text}"\nGrounded answer to convey verbatim in substance:\n${grounded}`,
