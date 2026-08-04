@@ -222,6 +222,30 @@ const server = createServer(async (req, res) => {
       return sendJson(res, 200, { ok: true, note: 'graph wiped — memory starts from zero (restart server for a full state reset)' });
     }
 
+    // ---- California coverage inventory (sales/demo surface) ----
+    if (path === '/api/pa/coverage' && req.method === 'GET') {
+      const lines = paRulesets.map((r) => ({
+        payer_id: r.payer_id,
+        payer_name: r.payer_name,
+        lob: r.lob,
+        basis: r.match_basis === 'lookup_tool' ? 'lookup tool (pointer)'
+          : r.match_basis === 'service_names' ? 'named services'
+            : r.rules.some((x) => x.kind === 'default') ? 'integrated (modeled)'
+              : 'code list',
+        effective_from: r.effective_from,
+        distinct_codes: new Set(r.rules.flatMap((x) => x.codes || [])).size,
+        delegated_programs: r.rules.filter((x) => x.kind === 'category').length,
+        named_services: r.rules.filter((x) => x.kind === 'service').length,
+        snapshot: r.sha256 ? r.sha256.slice(0, 12) : null,
+        source_url: r.document?.url || null,
+      })).sort((a, b) => (a.payer_name < b.payer_name ? -1 : 1));
+      const imaging = paImr?.categories.find((c) => c.category === 'Diag Imag & Screen') || null;
+      return sendJson(res, 200, {
+        lines,
+        imr: paImr ? { determinations: paImr.rows, imaging_overturn_rate: imaging?.overturn_rate ?? null } : null,
+      });
+    }
+
     // ---- real California PA resolver ----
     if (path === '/api/pa/resolve' && req.method === 'GET') {
       const p = url.searchParams;

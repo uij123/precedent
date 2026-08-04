@@ -300,6 +300,10 @@ main { flex: 1; display: flex; gap: 24px; padding: 24px; overflow: hidden; width
 }
 #graph-out td { padding: 4px 12px 4px 0; border-bottom: 1px solid var(--border); font-variant-numeric: tabular-nums; }
 .graph-note { color: var(--ink-secondary); font-size: 13px; }
+.cap-line { color: var(--ink-secondary); font-size: 13px; margin: 12px 0 0; }
+#coverage .claims-table td, #coverage .claims-table th { font-size: 13px; padding: 8px 12px 8px 0; }
+#coverage .claims-table tbody tr { cursor: default; }
+#coverage .claims-table tbody tr:hover { background: none; }
 
 /* sources panel — click-to-audit provenance for learned claims */
 #source-panel {

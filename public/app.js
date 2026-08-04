@@ -49,6 +49,7 @@ async function boot() {
 function renderAll() {
   renderAdapters(); renderScripts(); renderTicker(); renderMetrics(); renderRulebook();
   renderInbox(); renderChat(); renderCaptured(); renderHistory(); renderManager(); renderControls();
+  renderCoverage();
 }
 
 // ---------- SSE ----------
@@ -324,6 +325,33 @@ $('claims').addEventListener('click', async (e) => {
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $('source-panel').classList.add('hidden'); });
 
 // ---------- admin renders ----------
+async function renderCoverage() {
+  try {
+    const d = await (await fetch('/api/pa/coverage')).json();
+    if (!d.lines?.length) {
+      $('coverage').innerHTML = '<div class="rb-empty">No payer lines ingested yet. Run the pa-graph CLI.</div>';
+      return;
+    }
+    const rows = d.lines.map((l) => `<tr>
+      <td>${esc(l.payer_name)}</td>
+      <td>${esc(l.lob)}</td>
+      <td>${esc(l.basis)}</td>
+      <td class="num">${l.distinct_codes || '–'}</td>
+      <td class="num">${l.delegated_programs || '–'}</td>
+      <td>${l.effective_from || '–'}</td>
+      <td>${l.snapshot ? `<span class="cell-note">${l.snapshot}</span>` : '–'}</td>
+    </tr>`).join('');
+    const imr = d.imr
+      ? `<p class="cap-line">Plus ${d.imr.determinations.toLocaleString()} state IMR determinations as outcome evidence · ${Math.round((d.imr.imaging_overturn_rate || 0) * 100)}% of appealed imaging denials overturned.</p>`
+      : '';
+    $('coverage').innerHTML = `<table class="claims-table">
+      <thead><tr><th>Payer</th><th>Line</th><th>Basis</th><th class="num">Codes</th><th class="num">Delegations</th><th>Effective</th><th>Snapshot</th></tr></thead>
+      <tbody>${rows}</tbody></table>${imr}`;
+  } catch {
+    $('coverage').innerHTML = '<div class="rb-empty">Coverage inventory unavailable.</div>';
+  }
+}
+
 function renderAdapters() {
   $('adapters').innerHTML = state.adapters.map((a) =>
     `<span class="badge" title="${esc(a.detail)}"><span class="dot8 ${a.mode === 'live' ? 'd-ok' : 'd-warn'}"></span>${esc(a.name)} · ${a.mode === 'live' ? 'live' : 'fallback'}</span>`).join('');

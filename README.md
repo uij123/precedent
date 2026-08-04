@@ -63,6 +63,24 @@ every prediction is memory driving motion.
 | **RocketRide reads memory and acts** | `src/adapters/rocketride/index.js` + `src/services/chains.js` | The submit/appeal/notify chains open by querying the graph (`query-graph-requirements`), then act on what memory says: assemble the packet against learned rules, generate PDFs, email the packet, submit to the payer, write the verdict back into memory. Chain definitions are validated server-side by RocketRide's pipeline engine at boot; every chain is idempotent by `submission_id` (proven in the harness). |
 | **No dead imports / unused keys** | Admin tab badges + `npm test` | Every adapter reports live vs fallback truthfully in the UI, and the harness exercises each seam. |
 
+## The real California PA graph
+
+Beyond the synthetic demo world, `src/pa-graph/` ingests **real payer
+documents** into a deterministic, citable rulebook — seven California payer
+lines today (Blue Shield commercial + Promise Medi-Cal, UnitedHealthcare,
+Health Net Medi-Cal, Anthem, Kaiser, L.A. Care; 4,700+ codes), plus all
+42,749 of the state's public IMR appeal outcomes as evidence. One pure
+function answers coverage questions with the derivation and snapshot hash
+attached (`resolve.js`); the copilot returns those answers verbatim. A
+backward-looking battery (`test/pa-imr-battery.test.js`) replays the entire
+IMR corpus against the system. See `DEMO.md` for the three-minute demo
+script.
+
+```bash
+node src/pa-graph/cli.js ingest blueshield-commercial-pa-list
+node src/pa-graph/cli.js resolve blueshield_ca commercial 72148
+```
+
 ## Quickstart
 
 Prereqs: **Node ≥ 22.14**, **Docker** (for the two real sponsor backends).
