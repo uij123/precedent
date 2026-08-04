@@ -1,0 +1,25 @@
+{
+  "source_id": "kaiser-ca-integrated-model",
+  "payer_id": "kaiser_ca",
+  "payer_name": "Kaiser Permanente (California)",
+  "lob": "commercial",
+  "document": {
+    "title": "Kaiser Permanente integrated-care model (hand-modeled)",
+    "url": "https://healthy.kaiserpermanente.org/",
+    "note": "Kaiser is an integrated payer-provider: care is coordinated through internal referrals inside the Permanente Medical Groups rather than an external prior-authorization code list. There is no published PA code list to ingest; this ruleset is hand-modeled and says so in every answer. Narrow exceptions (e.g. some self-funded/KPIC PPO products) are pending sources."
+  },
+  "effective_from": "2026-01-01",
+  "sha256": null,
+  "fetched_at": "2026-08-03T00:00:00Z",
+  "rules": [
+    {
+      "kind": "default",
+      "requirement": "referral_only",
+      "policy": "Integrated care via internal referral",
+      "note": "Hand-modeled: Kaiser coordinates services through internal referrals, not an external PA list. Verify plan-specific exceptions (KPIC/self-funded PPO) with Kaiser directly.",
+      "detail": "No external prior authorization; access is governed by referral inside Kaiser's integrated system."
+    }
+  ],
+  "changelog": { "added": [], "removed": [] },
+  "stats": { "code_rules": 0, "category_rules": 0, "service_rules": 0, "distinct_codes": 0 }
+}

@@ -41,6 +41,18 @@ export async function loadRuleset(q, rs) {
           { policy: r.policy, lid: `${rs.payer_id}:${rs.lob}`, code, req: r.requirement, eff: rs.effective_from, sha: rs.sha256 });
         codeEdges += 1;
       }
+    } else if (r.kind === 'service') {
+      await q(
+        `MATCH (l:CoverageLine {id: $lid})
+         MERGE (s:PAService {name: $name, line_id: $lid})
+         SET s.notes = $notes, s.delegate = $delegate, s.adult = $adult, s.pediatric = $pediatric
+         MERGE (l)-[e:REQUIRES_SERVICE_AUTH]->(s)
+         SET e.effective_from = $eff, e.source_sha = $sha`,
+        {
+          lid: `${rs.payer_id}:${rs.lob}`, name: r.policy, notes: r.notes ?? null,
+          delegate: r.delegate ?? null, adult: r.adult, pediatric: r.pediatric,
+          eff: rs.effective_from, sha: rs.sha256,
+        });
     } else if (r.kind === 'category') {
       await q(
         `MATCH (l:CoverageLine {id: $lid})

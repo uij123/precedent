@@ -1,0 +1,627 @@
+{
+  "source_id": "healthnet-medical-pa-page",
+  "payer_id": "healthnet_ca",
+  "payer_name": "Health Net of California",
+  "lob": "medi-cal",
+  "match_basis": "service_names",
+  "document": {
+    "title": "Health Net Prior Authorization Requirements — Medi-Cal",
+    "url": "https://providerlibrary.healthnetcalifornia.com/content/hn-library-ca/en_us/medi-cal/prior-authorization-requirements---medi-cal.print.html",
+    "note": "Service-name based list; codes appear only for proprietary lab analyses. Unmatched codes resolve UNKNOWN by design."
+  },
+  "effective_from": "2026-07-09",
+  "sha256": "65d78398c0f579fa6e5cc5a50751cdd9a0298357a36e57b02e0b8be79d796a41",
+  "fetched_at": "2026-08-04T02:02:09.759Z",
+  "rules": [
+    {
+      "kind": "category",
+      "requirement": "prior_auth_delegated",
+      "policy": "Diagnostic procedures (advanced and cardiac imaging)",
+      "delegate": "Evolent Specialty Services, Inc.",
+      "category_key": "advanced_imaging"
+    },
+    {
+      "kind": "category",
+      "requirement": "prior_auth_delegated",
+      "policy": "Musculoskeletal, joint and spinal surgery (adults)",
+      "delegate": "TurningPoint Healthcare Solutions, LLC",
+      "category_key": "spine_surgery"
+    },
+    {
+      "kind": "code",
+      "requirement": "prior_auth",
+      "policy": "Proprietary laboratory analyses",
+      "codes": [
+        "0457U",
+        "0459U",
+        "0462U",
+        "0468U",
+        "0472U",
+        "0577U",
+        "0579U",
+        "0591U",
+        "0596U",
+        "0598U",
+        "0599U",
+        "0614U",
+        "0615U",
+        "0636U",
+        "0637U",
+        "0638U",
+        "0639U"
+      ]
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Skilled nursing facilities",
+      "notes": "All elective admissions",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "All elective medical and surgical inpatient hospitalizations",
+      "notes": "Includes, but is not limited to: acute care hospital acute or sub-acute rehabilitation facility Musculoskeletal procedures for adult members authorized by TurningPoint Healthcare Solutions, LLC",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "All emergency hospitalizations within 24 hours of hospital admission",
+      "notes": "Notification required only Contact the Hospital Notification Fax Line",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "All hospitalizations to a nonparticipating hospital once emergency stabilization is complete",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Long-term care nursing facility admissions",
+      "notes": "Contact the Health Net Long-Term Care Intake Line",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Ablative techniques for treating",
+      "notes": "Barrett’s esophagus, prostate tumors, and for treatment of primary and metastatic liver malignancies",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Acupuncture",
+      "notes": "Contact American Specialty Health Plans, Inc. (ASH Plans) Authorization not required for initial evaluation",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Balloon angioplasty",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Bariatric surgeries, such as laparoscopic gastric banding",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Behavioral health (outpatient services)",
+      "notes": "Authorized by the Behavioral Health Team Includes: Applied behavioral analysis (ABA) and other forms of behavioral health treatment for autism and pervasive developmental disorders Out-of-network access Psychological and neuropsychological testing Transcranial magnetic stimulation (TMS) PA not requi",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Bronchial thermoplasty",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Capsule endoscopy",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Cardiac procedures",
+      "notes": "All cardiac procedures for pediatric members require PA",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "For adult members, PA is required for therapeutic vascular embolization",
+      "notes": "Intravascular stent Percutaneous transluminal coronary angioplasty additional artery branch Therapeutic vascular embolization Transluminal angioplasty on an additional unilateral tibial or peroneal artery",
+      "adult": true,
+      "pediatric": false
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Clinical trials",
+      "notes": "To receive urgent status for routine services requiring authorization related to a clinical trial, include the Attestation form in your request or indicate “Routine Care Cost Services Associated with the Clinical Trial”",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Cochlear implants",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Community-Based",
+      "notes": "Adult Services (CBAS) PA is required for greater than 5 visits per week CBAS services with 1-5 visits per week require notification only Fax authorization and notifications to: 833-581-5908 (Face-to-face, authorization and notification requests)",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Custom orthotics",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Dental anesthesia: Intravenous (IV) moderate sedation and deep sedation/general anesthesia",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Developmental screening",
+      "notes": "PA required for ages 6–20",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Diagnostic procedures",
+      "notes": "Authorized by Evolent Specialty Services, Inc. (Evolent) Advanced imaging : Computed tomography (CT)/computed tomography angiography (CTA) Magnetic resonance imaging (MRI)/magnetic resonance angiography (MRA) Positron emission tomography (PET) scan Cardiac imaging : Coronary computed tomography angi",
+      "delegate": "Evolent Specialty Services, Inc",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Durable medical equipment (DME)",
+      "notes": "Adult members including, but not limited to: BiLevel positive airway pressure (BiPAP) Bone growth stimulator Continuous glucose monitoring Custom-made items Hospital beds and mattresses Incontinence supplies beyond 186 units per calendar month or the $165 benefit limitation — whichever is greater It",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Electroencephalogram (EEG)",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Enteral nutrition products",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Experimental/investigational services and new technologies",
+      "notes": "Includes, but is not limited to, those listed in the Investigational Procedures List (PDF)",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Gender reassignment services (Transgender services)",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Genetic testing",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "H. pylori (Helicobacter pylori) antibody testing",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Hernia repair",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Hyperbaric oxygen therapy",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Implantable pain pumps",
+      "notes": "Authorized by TurningPoint Healthcare Solutions , LLC",
+      "delegate": "TurningPoint Healthcare Solutions , LLC",
+      "adult": true,
+      "pediatric": false
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Intensive cardiac rehabilitation",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Joint surgeries – includes ankle, hip, knee and shoulder",
+      "notes": "Adult members authorized by TurningPoint Healthcare Solutions, LLC Pediatric members authorized by Health Net - Prior Authorization",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Leg stent bridge",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Lung volume reduction",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Maze procedures",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Medications requiring",
+      "notes": "PA Contact Pharmacy Services",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Neuro and spinal cord stimulators, including procedures",
+      "notes": "Adult members authorized by TurningPoint Healthcare Solutions, LLC Pediatric members authorized by Health Net - Prior Authorization",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Orthognathic procedures (includes",
+      "notes": "TMJ treatment)",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Out-of-network providers and services",
+      "notes": "Services rendered by out-of-network providers require PA Excludes emergency services and self-referral services allowed under the Medi-Cal plan for family planning, pregnancy termination, HIV counseling and testing, immunizations at the local health department, and sexually transmitted infections (S",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Outpatient infusion therapy",
+      "notes": "Includes, but is not limited to, blood transfusions and chemotherapy",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Palliative care",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Private duty nursing services",
+      "notes": "Early and Periodic Screening, Diagnosis and Treatment (EPSDT) services",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Proprietary laboratory analyses",
+      "notes": "Includes the following CPT ® codes: 0457U, 0459U, 0462U, 0468U, 0472U, 0577U, 0579U, 0591U, 0596U, 0598U, 0599U, 0614U, 0615U, 0636U, 0637U, 0638U, 0639U",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Prosthetics",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Quantitative drug screening",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Radiation therapy – All radiation for pediatric members requires",
+      "notes": "PA",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Radiation therapy – adult members",
+      "notes": "Limited to: Intensity modulated radiation therapy (IMRT) Neutron beam therapy Proton beam therapy Stereotactic radiosurgery and stereotactic body radiotherapy (SBRT)",
+      "adult": true,
+      "pediatric": false
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Reconstructive and cosmetic surgery, services and supplies",
+      "notes": "Surgery, services and supplies, including, but not limited to: Bone alteration or reshaping, such as osteoplasty Breast reduction and augmentation except when following a mastectomy (includes gynecomastia or macromastia) Dermatology, such as chemical exfoliation and electrolysis, dermabrasions and c",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Rehabilitation services",
+      "notes": "Physical, occupational and speech therapy require authorization after 12 combined visits. Includes home setting",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Sacroiliac (SI) joint injections",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Sleep studies",
+      "notes": "Facility based sleep testing",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Spinal surgery – includes, but is not limited to, laminotomy, fusion, diskectomy, vertebroplasty, nucleoplasty, stabiliz",
+      "notes": "ation, and X-Stop Adult members authorized by TurningPoint Healthcare Solutions, LLC Pediatric members authorized by Health Net - Prior Authorization",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Surgery (other)",
+      "notes": "All outpatient elective surgery for pediatric members requires PA",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "For adult members: Bunionectomy",
+      "notes": "Laparoscopic myomectomy Laparoscopic retropubic radical prostatectomy Heel osteotomy Metatarsal osteotomy Surgical hammertoe correction Thyroid surgery Unlisted laparoscopic procedure involving the abdomen, peritoneum, or omentum Other Wrist or thumb surgery",
+      "adult": true,
+      "pediatric": false
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Transplant",
+      "notes": "Fax requests to the Transplant Team Transplant evaluations and procedures, including, but not limited to, evaluation, transplant consult visits, donor search, and transplant procedure",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Transportation",
+      "notes": "All non-emergency medical transportation (NEMT) requires a Physician Certification Statement (PCS) (Medi-Cal (PDF) or CalViva (PDF) or CHPIV (PDF) ) Ground NEMT is authorized by the Care Ride Unit (ambulance, ambulatory door-to-door [needs assistance and/or using walker/cane/crutches], gurney/stretc",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Unlisted services and procedures",
+      "notes": "Services or procedures without a specific code",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Uvulopalatopharyngoplasty (UPPP) and laser-assisted",
+      "notes": "UPPP",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Ventriculectomy, cardiomyoplasty",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Vestibuloplasty",
+      "notes": "Surgical procedure",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Wound care",
+      "notes": "Including but not limited to: Skin substitutes and biologicals Wound debridement – authorization required after 12 sessions per year",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Authorization for carve-out services not covered by",
+      "notes": "Health Net or CalViva Health, such as CCS -eligible conditions, requires PA from the local CCS office.",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "CCS services must be provided by",
+      "notes": "CCS-paneled providers and at CCS -approved facilities.",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Any services related to",
+      "notes": "CCS -eligible medical conditions must be approved by the CCS program. Refer to the California Code of Regulations, Title 22, Division 2, Part 2, Subdivision 7, CCS, Chapter 4, Medical Eligibility, Article 4, available online at www.calregs.com.",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Routine laboratory and radiology services must be performed at a",
+      "notes": "Health Net or CalViva Health participating facility.",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Specialty mental health services and select substance use disorder services are covered by the county mental health prog",
+      "notes": "ram . If coordination assistance with the county mental health program is needed, contact Medi-Cal Member Services .",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Cosmetic surgery is not a benefit of the",
+      "notes": "Medi-Cal program . Cosmetic surgery requests are reviewed for possible reconstructive benefits, as well as medical necessity, using the Department of Health Care Services (DHCS) definition of cosmetic surgery.",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Authorizations for services commonly included in the local educational agency (LEA) carve-out are referred to the local",
+      "notes": "school district. These include speech therapy, occupational therapy and audiology services for children ages three and over, and psychological testing for attention deficit disorder (ADD) and attention deficit hyperactivity disorder (ADHD).",
+      "adult": false,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "A member or provider is not required to obtain prior authorization for",
+      "notes": "NEMT services if the member is being transferred from an emergency room to an inpatient setting, or from an acute care hospital, immediately following an inpatient stay at the acute level of care, to a skilled nursing facility, an intermediate care facility or imbedded psychiatric units, free standi",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Referral or",
+      "notes": "PA is not required for the following sensitive services, and the services may be obtained from any qualified in-network or out-of-network provider: Minor consent services which include treatment for the following: Under age 12 Pregnancy and pregnancy related services, including abortion services Fam",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Referral or",
+      "notes": "PA is not required for Comprehensive Perinatal Services Program (CPSP) services. Services may be obtained from any participating CPSP providers. Refer to the CPSP website for more information about locating a CPSP provider.",
+      "adult": true,
+      "pediatric": true
+    },
+    {
+      "kind": "service",
+      "requirement": "prior_auth",
+      "policy": "Other services not requiring",
+      "notes": "PA: Basic prenatal maternal and preventive services and care as defined by the most current clinical standards or guidelines of American College of Obstetricians and Gynecologists (ACOG) and Comprehensive Perinatal Services Program (CPSP) with a participating network obstetrician. Obstetrical/gyneco",
+      "adult": true,
+      "pediatric": true
+    }
+  ],
+  "changelog": {
+    "added": [],
+    "removed": []
+  },
+  "stats": {
+    "code_rules": 1,
+    "category_rules": 2,
+    "service_rules": 73,
+    "distinct_codes": 17
+  }
+}

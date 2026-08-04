@@ -85,6 +85,42 @@ test('pa-resolve: deterministic — every question twice, plus round-trip parity
   }
 });
 
+const kaiser = JSON.parse(readFileSync(join(dir, '..', 'data', 'pa', 'kaiser-ca-model.2026-01-01.json'), 'utf8'));
+const anthem = JSON.parse(readFileSync(join(dir, '..', 'data', 'pa', 'anthem-ca-lookup.2026-01-01.json'), 'utf8'));
+
+test('pa-resolve: Kaiser integrated model → referral_only by structural default', () => {
+  const r = resolve([kaiser], { payer: 'kaiser_ca', lob: 'commercial', code: '72148', asOf: '2026-08-03' });
+  assert.equal(r.requirement_type, 'referral_only');
+  assert.ok(r.derivation.some((d) => d.step === 'line_default'));
+});
+
+test('pa-resolve: Anthem lookup-tool line → UNKNOWN with the pointer, never a guess', () => {
+  const r = resolve([anthem], { payer: 'anthem_ca', lob: 'commercial', code: '72148', asOf: '2026-08-03' });
+  assert.equal(r.requirement_type, 'unknown');
+  assert.equal(r.reason, 'lookup_tool_line');
+  assert.match(r.detail, /lookup-tool|Lookup Tool/i);
+});
+
+test('pa-resolve: service-name lists — imaging delegates, everything else UNKNOWN not exempt', () => {
+  const hn = {
+    payer_id: 'healthnet_ca', payer_name: 'Health Net of California', lob: 'medi-cal',
+    match_basis: 'service_names', effective_from: '2026-07-09', sha256: 'hnsha', fetched_at: 'x',
+    document: { title: 't', url: 'u' },
+    rules: [
+      { kind: 'category', requirement: 'prior_auth_delegated', policy: 'Diagnostic procedures', delegate: 'Evolent Specialty Services, Inc.', category_key: 'advanced_imaging' },
+      { kind: 'code', requirement: 'prior_auth', policy: 'Proprietary laboratory analyses', codes: ['0457U'] },
+      { kind: 'service', requirement: 'prior_auth', policy: 'Hernia repair', adult: true, pediatric: true },
+    ],
+  };
+  const q = (code) => resolve([hn], { payer: 'healthnet_ca', lob: 'medi-cal', code, asOf: '2026-08-03' });
+  assert.equal(q('72148').requirement_type, 'prior_auth_delegated');
+  assert.match(q('72148').delegate, /Evolent/);
+  assert.equal(q('0457U').requirement_type, 'prior_auth');
+  const miss = q('99213');
+  assert.equal(miss.requirement_type, 'unknown');
+  assert.equal(miss.reason, 'service_name_list');
+});
+
 test('pa-imr: quote-aware CSV line parsing', () => {
   assert.deepEqual(
     parseCsvLine('"a","b ""quoted"", with comma",42,'),

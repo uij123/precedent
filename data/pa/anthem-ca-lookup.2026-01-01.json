@@ -1,0 +1,18 @@
+{
+  "source_id": "anthem-ca-lookup-tool",
+  "payer_id": "anthem_ca",
+  "payer_name": "Anthem Blue Cross of California",
+  "lob": "commercial",
+  "match_basis": "lookup_tool",
+  "document": {
+    "title": "Anthem Prior Authorization Lookup Tool (per-code)",
+    "url": "https://providers.anthem.com/california-provider/claims/prior-authorization-lookup-tool",
+    "note": "Anthem publishes no downloadable PA code list for California; the lookup tool answers per code, and provider manuals carry narrative requirements. Automated capture of the tool's backend is a pending source, gated on a terms-of-service review — until then the resolver answers UNKNOWN with this pointer rather than guessing."
+  },
+  "effective_from": "2026-01-01",
+  "sha256": null,
+  "fetched_at": "2026-08-03T00:00:00Z",
+  "rules": [],
+  "changelog": { "added": [], "removed": [] },
+  "stats": { "code_rules": 0, "category_rules": 0, "service_rules": 0, "distinct_codes": 0 }
+}

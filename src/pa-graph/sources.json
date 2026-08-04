@@ -13,6 +13,28 @@
       "notes": "Single PDF, updated monthly, carries its own effective date. Advanced imaging / spine surgery / pain management delegated to RadMD (Evolent/NIA); radiation + medical oncology delegated to CarePro. Delegate code lists are separate future sources."
     },
     {
+      "id": "uhc-commercial-pa-list",
+      "payer_id": "uhc_ca",
+      "payer_name": "UnitedHealthcare",
+      "lob": "commercial",
+      "kind": "pa_code_list",
+      "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/prior-auth/pa-requirements/commercial/UHC-Commercial-Advance-Notification-PA-Requirements-7-2026.pdf",
+      "parser": "uhc-list",
+      "cadence": "monthly",
+      "notes": "National commercial list (applies to CA). Radiology delegated to UHC's own Radiology Prior Authorization program; codes live in a separate crosswalk (pending source). URL month segment changes with each edition."
+    },
+    {
+      "id": "healthnet-medical-pa-page",
+      "payer_id": "healthnet_ca",
+      "payer_name": "Health Net of California",
+      "lob": "medi-cal",
+      "kind": "pa_service_page",
+      "url": "https://providerlibrary.healthnetcalifornia.com/content/hn-library-ca/en_us/medi-cal/prior-authorization-requirements---medi-cal.print.html",
+      "parser": "hn-print",
+      "cadence": "monthly",
+      "notes": "Server-rendered print variant of the provider-library page. Service-name based; advanced imaging delegated to Evolent, musculoskeletal/spine to TurningPoint. Commercial/HMO line published elsewhere (pending source)."
+    },
+    {
       "id": "dmhc-imr-determinations",
       "payer_id": null,
       "payer_name": "All DMHC-regulated plans (payer-anonymous)",

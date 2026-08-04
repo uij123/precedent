@@ -8,6 +8,8 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createSnapshotStore, fetchBytes } from './snapshot.js';
 import { parseBscList } from './parse-bsc-list.js';
+import { parseUhcList } from './parse-uhc-list.js';
+import { parseHnPage } from './parse-hn-page.js';
 import { aggregateImr } from './imr.js';
 import { openPaGraph, loadRuleset, loadImr } from './load-graph.js';
 import { resolve as paResolve } from './resolve.js';
@@ -37,11 +39,12 @@ async function ingest(sourceId) {
   const snap = store.save(bytes, { url: src.url, source_id: src.id });
   console.log(`[snapshot] sha256 ${snap.sha256.slice(0, 16)}… (${bytes.length} bytes)`);
 
-  if (src.parser === 'bsc-list') {
+  if (src.parser === 'bsc-list' || src.parser === 'uhc-list') {
     // import the lib file directly: the package index self-runs demo code under ESM
     const { default: pdf } = await import('pdf-parse/lib/pdf-parse.js');
     const parsed = await pdf(bytes);
-    const rs = parseBscList(parsed.text, { source: src, sha256: snap.sha256, fetched_at: snap.fetched_at });
+    const parse = src.parser === 'uhc-list' ? parseUhcList : parseBscList;
+    const rs = parse(parsed.text, { source: src, sha256: snap.sha256, fetched_at: snap.fetched_at });
     if (!rs.effective_from) throw new Error('could not read the effective date from the document');
     const out = join(DATA_DIR, `${src.id}.${rs.effective_from}.json`);
     writeFileSync(out, JSON.stringify(rs, null, 2));
@@ -54,6 +57,24 @@ async function ingest(sourceId) {
       console.log(`[graph] pa_california loaded: ${res.codeEdges} REQUIRES_AUTH edges`);
     } catch (e) {
       console.log(`[graph] skipped (FalkorDB unavailable: ${e.message}) — canonical JSON still written`);
+    }
+    return;
+  }
+
+  if (src.parser === 'hn-print') {
+    const rs = parseHnPage(bytes.toString('utf8'), { source: src, sha256: snap.sha256, fetched_at: snap.fetched_at });
+    if (!rs.effective_from) throw new Error('could not read the effective date from the page');
+    const out = join(DATA_DIR, `${src.id}.${rs.effective_from}.json`);
+    writeFileSync(out, JSON.stringify(rs, null, 2));
+    console.log(`[parse] ${rs.stats.service_rules} named services · ${rs.stats.category_rules} delegated programs · ${rs.stats.distinct_codes} explicit codes`);
+    console.log(`[canonical] ${out}`);
+    try {
+      const g = await openPaGraph();
+      await loadRuleset(g.q, rs);
+      await g.close();
+      console.log('[graph] pa_california loaded');
+    } catch (e) {
+      console.log(`[graph] skipped (FalkorDB unavailable: ${e.message})`);
     }
     return;
   }
