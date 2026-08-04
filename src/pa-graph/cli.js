@@ -10,6 +10,7 @@ import { createSnapshotStore, fetchBytes } from './snapshot.js';
 import { parseBscList } from './parse-bsc-list.js';
 import { parseUhcList } from './parse-uhc-list.js';
 import { parseHnPage } from './parse-hn-page.js';
+import { parseBspList } from './parse-bsp-list.js';
 import { aggregateImr } from './imr.js';
 import { openPaGraph, loadRuleset, loadImr } from './load-graph.js';
 import { resolve as paResolve } from './resolve.js';
@@ -39,11 +40,11 @@ async function ingest(sourceId) {
   const snap = store.save(bytes, { url: src.url, source_id: src.id });
   console.log(`[snapshot] sha256 ${snap.sha256.slice(0, 16)}… (${bytes.length} bytes)`);
 
-  if (src.parser === 'bsc-list' || src.parser === 'uhc-list') {
+  if (src.parser === 'bsc-list' || src.parser === 'uhc-list' || src.parser === 'bsp-list') {
     // import the lib file directly: the package index self-runs demo code under ESM
     const { default: pdf } = await import('pdf-parse/lib/pdf-parse.js');
     const parsed = await pdf(bytes);
-    const parse = src.parser === 'uhc-list' ? parseUhcList : parseBscList;
+    const parse = src.parser === 'uhc-list' ? parseUhcList : src.parser === 'bsp-list' ? parseBspList : parseBscList;
     const rs = parse(parsed.text, { source: src, sha256: snap.sha256, fetched_at: snap.fetched_at });
     if (!rs.effective_from) throw new Error('could not read the effective date from the document');
     const out = join(DATA_DIR, `${src.id}.${rs.effective_from}.json`);

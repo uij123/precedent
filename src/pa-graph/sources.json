@@ -24,6 +24,17 @@
       "notes": "National commercial list (applies to CA). Radiology delegated to UHC's own Radiology Prior Authorization program; codes live in a separate crosswalk (pending source). URL month segment changes with each edition."
     },
     {
+      "id": "blueshield-promise-pa-list",
+      "payer_id": "blueshield_ca",
+      "payer_name": "Blue Shield of California Promise Health Plan",
+      "lob": "medi-cal",
+      "kind": "pa_code_list",
+      "url": "https://www.blueshieldca.com/content/dam/bsca/en/promise/docs/2026-Medi-Cal-Prior-Auth-List-July.pdf",
+      "parser": "bsp-list",
+      "cadence": "monthly",
+      "notes": "Blue Shield's Medi-Cal entity. One code per row with description; specialized imaging listed explicitly, no blanket radiology delegation in this document. URL month name changes per edition."
+    },
+    {
       "id": "healthnet-medical-pa-page",
       "payer_id": "healthnet_ca",
       "payer_name": "Health Net of California",

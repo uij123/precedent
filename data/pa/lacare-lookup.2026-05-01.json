@@ -1,0 +1,18 @@
+{
+  "source_id": "lacare-pa-lookup-tool",
+  "payer_id": "lacare_ca",
+  "payer_name": "L.A. Care Health Plan",
+  "lob": "medi-cal",
+  "match_basis": "lookup_tool",
+  "document": {
+    "title": "L.A. Care Provider Prior Authorization Tool (per-code)",
+    "url": "https://www.lacare.org/providers/provider-prior-authorization-tool",
+    "note": "L.A. Care (the largest public health plan in the US) answers PA per code through its provider tool; its published Disclaimer and Rules document (la7169, May 2026) states that ALL inpatient services require prior authorization and the list governs outpatient services when L.A. Care, not the delegated physician group, pays the claim. Automated capture of the tool is a pending source; until then the resolver answers UNKNOWN with this pointer."
+  },
+  "effective_from": "2026-05-01",
+  "sha256": null,
+  "fetched_at": "2026-08-03T00:00:00Z",
+  "rules": [],
+  "changelog": { "added": [], "removed": [] },
+  "stats": { "code_rules": 0, "category_rules": 0, "service_rules": 0, "distinct_codes": 0 }
+}
